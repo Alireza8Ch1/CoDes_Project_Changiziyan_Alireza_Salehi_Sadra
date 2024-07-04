@@ -2,16 +2,16 @@
 Built-in symbols=0
 SixBitProcessor=0
 [COMPILESTATUS|.\src\SixBitProcessor.vhd]
-FileTimeLow=1893090540
-FileTimeHigh=31114817
+FileTimeLow=1329084810
+FileTimeHigh=31116815
 Status=Compiled
 [COMPILESTATUS|.\src\TestBench\sixbitprocessor_TB.vhd]
-FileTimeLow=2747322894
-FileTimeHigh=31114818
+FileTimeLow=1726921294
+FileTimeHigh=31116807
 Status=Compiled
 [COMPILESTATUS|.\src\TestBench\sixbitprocessor_TB_runtest.do]
-FileTimeLow=2609191316
-FileTimeHigh=31114818
+FileTimeLow=183759780
+FileTimeHigh=31116815
 Status=Modified
 [CACHEDOC|Aldec.Hde.HdePlugIn.7|D:/Program Files/ActiveHDL/ACTIVEHDL/vlib/std/src/standard.vhd|]
 CurrentLine=0
@@ -42,6 +42,10 @@ ZoomFactor=0
 Frame=0
 WindowWorkspaceInfo="LAAAAAAAAAABAAAA/////////////////////zoEAAChAAAAqAYAAEwDAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADIAAAAyAAAAAAAAAAAAAAAyAAAAMgAAAAAAAAAAAAAAAAAAAAAAAAACQAAAAEAAAAAAAAAAQAAAA=="
 [COMPILESTATUS|.\src\SixBitProcessorWithMultiplier.vhd]
-FileTimeLow=2581268994
-FileTimeHigh=31116801
+FileTimeLow=3065985782
+FileTimeHigh=31116813
 Status=Modified
+[COMPILESTATUS|.\src\TestBench\sixbitprocessor_TB.vhd]
+FileTimeLow=1576720955
+FileTimeHigh=31116815
+Status=Compiled

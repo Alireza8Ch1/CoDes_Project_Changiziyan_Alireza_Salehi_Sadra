@@ -21,11 +21,13 @@ FAMILY=
 /SixBitProcessorWithMultiplier.vhd=-1
 TestBench/sixbitprocessor_TB.vhd=-1
 TestBench/sixbitprocessor_TB_runtest.do=-1
+TestBench/sixbitprocessor_TB.vhd=-1
 [Files.Data]
 .\src\SixBitProcessor.vhd=VHDL Source Code
 .\src\SixBitProcessorWithMultiplier.vhd=VHDL Source Code
 .\src\TestBench\sixbitprocessor_TB.vhd=VHDL Test Bench
 .\src\TestBench\sixbitprocessor_TB_runtest.do=Macro
+.\src\TestBench\sixbitprocessor_TB.vhd=VHDL Test Bench
 [Groups]
 TestBench=1
 [HierarchyViewer]

@@ -19,6 +19,31 @@ architecture TB_ARCHITECTURE of sixbitprocessor_tb is
 	-- Stimulus signals - signals mapped to the input and inout ports of tested entity
 	signal clk : STD_LOGIC;
 	signal reset : STD_LOGIC;
+	type Memory_TYPE is array (63 downto 0) of std_logic_vector(5 downto 0);
+	signal Memory : Memory_TYPE := 
+    ( 		 
+       -- PART 1:
+       0     => "000000", -- Load R0,
+       1     => "000111", -- 7
+       2     => "000100", -- Load R1,
+       3     => "000100", -- 4
+       4     => "010001", -- Add, R0, R1
+       others => "111111" -- Halt	 
+        --PART 2:
+        --0  => "000000", 
+        --1  => "000110",	
+        --2  => "000100",	
+        --3  => "001000",	
+        --4  => "001000",	
+        --5  => "000001",	
+        --6  => "001100",	
+        --7  => "000000",	
+        --8  => "011100", 
+        --9  => "100110",
+        --10 => "110100",
+        --11 => "001000",
+        --others => "111111"   
+    );
 	-- Observed signals - signals mapped to the output ports of tested entity
 
 	-- Add your code here ...
@@ -38,9 +63,9 @@ begin
    process
    begin
         clk <= '0';
-        wait for 50ns;  
+        wait for 10ns;  
         clk <= '1';
-        wait for 50ns;  
+        wait for 10ns;  
    end process;
 end TB_ARCHITECTURE;
 

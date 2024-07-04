@@ -3,4 +3,4 @@ MESSAGE "File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Saleh
 MESSAGE "Compile Entity "sixbitprocessor_tb"" 
 MESSAGE "Compile Architecture "TB_ARCHITECTURE" of Entity "sixbitprocessor_tb"" 
 MESSAGE "Compile Configuration "TESTBENCH_FOR_sixbitprocessor"" 
-SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]" 

@@ -11,20 +11,32 @@ end SixBitProcessor;
 
 architecture SixBitProcessorArch of SixBitProcessor is	 
 
-type Memory_TYPE is array (16 downto 0) of std_logic_vector(5 downto 0);
-type State_t is (S0,S1, S2, S3, S4, S5, S6, S7);
+type Memory_TYPE is array (63 downto 0) of std_logic_vector(5 downto 0);
+type State_t is (S0,S1, HaltCheck, S2, S3, S4, S5, S6, S7);
 
 signal Memory : Memory_TYPE := 
 ( 		 
    -- PART 1:
-   0     => "000000", -- Load R0,
-   1     => "000111", -- 7
-   2     => "000100", -- Load R1,
-   3     => "000100", -- 4
-   4     => "010001", -- Add, R0, R1
-   others => "111111" -- Halt	 
- 
-   
+       --0     => "000000", -- Load R0,
+       --1     => "000111", -- 7
+       --2     => "000100", -- Load R1,
+       --3     => "000100", -- 4
+       --4     => "010001", -- Add, R0, R1
+       --others => "111111" -- Halt	 
+        --PART 2:
+        0  => "000000", 
+        1  => "000110",	
+        2  => "000100",	
+        3  => "001000",	
+        4  => "001000",	
+        5  => "000001",	
+        6  => "001100",	
+        7  => "000000",	
+        8  => "011100", 
+        9  => "100110",
+        10 => "110100",
+        11 => "001000",
+        others => "111111"   
 );
 
 --FSM
@@ -164,6 +176,8 @@ begin
 			LDIR <= '1';
 			INC <= '1';
 			BUSSel <= '0';
+			state_next <=  HaltCheck;
+		when HaltCheck =>
 			if IR = "111111" then
 				state_next <= s2;
 			elsif IR(5 downto 4) = "00" then
@@ -179,7 +193,6 @@ begin
 					state_next <= s7;
 				end if;
 			end if;
-			
 		when s2 =>
 			state_next <= s2;
 
