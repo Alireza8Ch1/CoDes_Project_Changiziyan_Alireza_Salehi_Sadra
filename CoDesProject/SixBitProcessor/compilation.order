@@ -1,0 +1,3 @@
+.\src\SixBitProcessor.vhd
+.\src\SixBitProcessorWithMultiplier.vhd
+.\src\TestBench\sixbitprocessor_TB.vhd

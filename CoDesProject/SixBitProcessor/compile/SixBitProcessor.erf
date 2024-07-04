@@ -1,0 +1,6 @@
+WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
+MESSAGE "File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/TestBench/sixbitprocessor_TB.vhd" 
+MESSAGE "Compile Entity "sixbitprocessor_tb"" 
+MESSAGE "Compile Architecture "TB_ARCHITECTURE" of Entity "sixbitprocessor_tb"" 
+MESSAGE "Compile Configuration "TESTBENCH_FOR_sixbitprocessor"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]" 
