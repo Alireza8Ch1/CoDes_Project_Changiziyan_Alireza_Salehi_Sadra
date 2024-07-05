@@ -13,34 +13,47 @@ architecture SixBitProcessorArch of SixBitProcessor is
 
 -- signals			  										  
 -- "state_type" is type for control unit states
-type state_type is (S0,S1, HaltCheck, S2, S3, S4, S5, S6, S7);
+type state_type is (S0,S1, HaltCheck, S2, S3, S4, S5, S6, S7);	 
+
 -- "std_logic_vector_array" is a type with 6 bits used for declare an array of 6bit values
-type std_logic_vector_array	is array (natural range <>) of std_logic_vector(5 downto 0);
+type std_logic_vector_array	is array (natural range <>) of std_logic_vector(5 downto 0);   
+
 -- "std_logic_array" is a type with 1 bit used for declare an array of 1 bit values
 type std_logic_array	is array (natural range <>) of std_logic;  						
+
 -- "std_logic_array_2Bit" is a type with 2 bit used for declare an array of 2 bit values
 type std_logic_array_2Bit	is array (natural range <>) of std_logic_vector(1 downto 0);
+
 -- control unit states
 signal state_reg, state_next : state_type;
+
 -- "ROUT" and "RIN" in order are registers output and inputs that thier
 -- type is an array of 6 bit values with array size 4 (number of registers is 4)
 signal ROUT,RIN : std_logic_vector_array(0 to 3);
+
 -- "LD" and "ZR" are registers load and zero input that their type is
 -- an array of 1 bit values with array size 4
 signal LD,ZR : std_logic_array(0 to 3);		 
+
 -- "IRNext" and "PCNext" are inputs for IR and PC registers
 signal IRNext,PCNext : std_logic_vector (5 downto 0);		 
+
 -- MUX inputs and outputs and selector for selecting BUS value
 signal MData, DataBUS, ALURes: std_logic_vector(5 downto 0);
 signal BUSSel : std_logic; 
+
 -- ALU MUXs' selectors that "ALUINSelector" is an array with size 2 with 2 bit values
 signal ALUINSelector: std_logic_array_2Bit(1 downto 0);
+
 -- ALU IN1 and IN2 that "ALUIN" is an array with size 2 with 6 bit values
 signal ALUIN : std_logic_vector_array(1 downto 0);
+
 -- ALU CMD for selecting operator
 signal CMD : std_logic;	
+
 -- "IR" and "PC" are outputs for IR and PC registers
 signal IR,PC : std_logic_vector (5 downto 0);
+
 -- other IR and PC inputs
 signal LDPC,LDIR,INC,RST : std_logic;
 
@@ -73,7 +86,7 @@ signal Memory : Memory_TYPE :=
         others => "111111"   
 );
 
-
+signal memory_read_address : integer range 0 to 63;
 
 begin	   
 	
@@ -84,30 +97,43 @@ begin
 		begin  
 			if reset='1' then
 				ROUT(k) <= (others => '0');
-			elsif (clk'event and clk='1') then
-				ROUT(k) <= RIN(k);
+			elsif (clk'event and clk='1' and LD(k)='1') then
+				ROUT(k) <= DataBUS;
 			end if;
 		end process;					  
 		--Set ZR signal
 		ZR(k) <= '1' when ROUT(k)="000000" else '0'; 
 			
-		RIN(k) <= DataBUS when LD(k)='1' else ROUT(k);	 
+		--RIN(k) <= DataBUS when LD(k)='1' else ROUT(k);	 
 	end generate Registers;
 	
 	--IR and PC Registers
 	process(clk,reset)  
-	begin 	
+	begin 
+		IR <= IR;
+		PC <= PC;
 		if reset='1' then 
 			IR <= (others => '0');
 			PC <= (others => '0');
-		elsif (rising_edge(clk)) then			
-			IR <= IRNext;
-			PC <= PCNext;
+		elsif (clk'event and clk='1') then	
+			if LDIR='1' then
+				IR <= DataBUS; 	   
+			end if;
+			
+			if LDPC='1' then
+				PC <= DataBUS;
+			elsif INC='1' then
+				PC <= PC+1;
+			elsif RST='1' then
+				PC <= (others => '0');
+			end if;	
+			--IR <= IRNext;
+			--PC <= PCNext;
 		end if;
 	end process;
 	
-	PCNext <= DataBUS when LDPC='1' else PC+1 when INC='1' else "000000" when RST='1' else PC;
-	IRNext <= DataBUS when LDIR='1' else IR;
+	--PCNext <= DataBUS when LDPC='1' else PC+1 when INC='1' else "000000" when RST='1' else PC;
+	--IRNext <= DataBUS when LDIR='1' else IR;
 	
 	
 	
@@ -145,8 +171,8 @@ begin
 	
 	
 	
-	
-	MData <= Memory(to_integer(unsigned(PC)));	
+	memory_read_address <= to_integer(unsigned(PC)); 
+	MData <= Memory(memory_read_address);	
 
 
 
@@ -156,20 +182,16 @@ begin
 	 
 	
 	process(IR, ZR, state_reg)
-	begin
-	CMD <= '0';
-	INC <= '0';
-	RST <= '0';
-	LD(0) <= '0';
-	LD(1) <= '0';
-	LD(2) <= '0';
-	LD(3) <= '0';
+	begin	
+	ALUINSelector <= (others => "00");
+	LD <= (others => '0');
+	BUSSel <= '0';
 	LDPC <= '0';
 	LDIR <= '0';
-	ALUINSelector(0) <= "00";
-	ALUINSelector(1) <= "00";
-	BUSSel <= '0';
-
+	INC <= '0';
+	CMD <= '0';
+	RST <= '0';
+	
 	-- control unit states
 	case state_reg is
 		when s0 =>

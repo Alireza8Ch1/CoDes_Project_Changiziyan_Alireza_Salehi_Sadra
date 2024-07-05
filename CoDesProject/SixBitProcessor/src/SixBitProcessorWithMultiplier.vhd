@@ -71,14 +71,14 @@ begin
 		begin  
 			if reset='1' then
 				ROUT(k) <= (others => '0');
-			elsif (clk'event and clk='1') then
-				ROUT(k) <= RIN(k);
+			elsif (clk'event and clk='1' and LD(k)='1') then
+				ROUT(k) <= DataBUS;
 			end if;
 		end process;					  
 		--Set ZR signal
 		ZR(k) <= '1' when ROUT(k)="0000000" else '0'; 
-			
-		RIN(k) <= DataBUS when LD(k)='1' else ROUT(k);	 
+		
+		--RIN(k) <= DataBUS when LD(k)='1' else ROUT(k);	 
 	end generate Registers;
 	
 	--IR and PC Registers
@@ -87,7 +87,7 @@ begin
 		if reset='1' then 
 			IR <= (others => '0');
 			PC <= (others => '0');
-		elsif (rising_edge(clk)) then			
+		elsif (clk'event and clk='1') then			
 			IR <= IRNext;
 			PC <= PCNext;
 		end if;

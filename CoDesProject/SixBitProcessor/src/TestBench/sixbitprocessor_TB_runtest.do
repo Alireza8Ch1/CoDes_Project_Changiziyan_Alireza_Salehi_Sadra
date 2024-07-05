@@ -1,5 +1,5 @@
 SetActiveLib -work
-comp -include "$dsn\src\SixBitProcessorWithMultiplier.vhd" 
+comp -include "$dsn\src\SixBitProcessor.vhd" 
 comp -include "$dsn\src\TestBench\sixbitprocessor_TB.vhd" 
 asim +access +r TESTBENCH_FOR_sixbitprocessor 
 wave 

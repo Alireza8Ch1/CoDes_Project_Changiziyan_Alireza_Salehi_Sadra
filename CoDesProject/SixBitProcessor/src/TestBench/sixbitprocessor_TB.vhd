@@ -6,16 +6,11 @@ use ieee.std_logic_1164.all;
 	-- Add your library and packages declaration here ...
 
 entity sixbitprocessor_tb is
-	-- Generic declarations of the tested unit
-		generic(
-		instruction_bits : POSITIVE := 7 );
 end sixbitprocessor_tb;
 
 architecture TB_ARCHITECTURE of sixbitprocessor_tb is
 	-- Component declaration of the tested unit
 	component sixbitprocessor
-		generic(
-		instruction_bits : POSITIVE := 7 );
 	port(
 		clk : in STD_LOGIC;
 		reset : in STD_LOGIC );
@@ -32,17 +27,13 @@ begin
 
 	-- Unit Under Test port map
 	UUT : sixbitprocessor
-		generic map (
-			instruction_bits => instruction_bits
-		)
-
 		port map (
 			clk => clk,
 			reset => reset
 		);
 
 	-- Add your stimulus here ...
-	reset <= '1', '0' after 10ns;
+	  reset <= '1', '0' after 10ns;
    
    process
    begin
