@@ -1,3 +1,4 @@
 i<>.\src\SixBitProcessor.vhd
 i<>.\src\TestBench\sixbitprocessor_TB.vhd
 i<>.\src\SixBitProcessorWithMultiplier.vhd
+i<>.\src\TestBench\sixbitprocessorwithmultiplier_TB.vhd

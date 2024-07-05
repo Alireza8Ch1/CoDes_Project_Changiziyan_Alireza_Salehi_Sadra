@@ -1,6 +1,11 @@
-73
-~E 1 "../src/SixBitProcessor.vhd" 6 SixBitProcessor
-~A 1 "../src/SixBitProcessor.vhd" 12 SixBitProcessorArch
+104
+~E 1 "../src/SixBitProcessorWithMultiplier.vhd" 6 SixBitProcessor
+~A 1 "../src/SixBitProcessorWithMultiplier.vhd" 13 SixBitProcessorArch
 ~E 1 "../src/TestBench/sixbitprocessor_TB.vhd" 8 sixbitprocessor_tb
-~A 1 "../src/TestBench/sixbitprocessor_TB.vhd" 11 TB_ARCHITECTURE
-~C 1 "../src/TestBench/sixbitprocessor_TB.vhd" 72 testbench_for_sixbitprocessor
+~A 1 "../src/TestBench/sixbitprocessor_TB.vhd" 14 TB_ARCHITECTURE
+~E 1 "../src/SixBitProcessorWithMultiplier.vhd" 6 SixBitProcessorWithMultiplier
+~A 1 "../src/SixBitProcessorWithMultiplier.vhd" 13 SixBitProcessorWithMultiplierArch
+~E 1 "../src/TestBench/sixbitprocessorwithmultiplier_TB.vhd" 8 sixbitprocessorwithmultiplier_tb
+~A 1 "../src/TestBench/sixbitprocessorwithmultiplier_TB.vhd" 14 TB_ARCHITECTURE
+~C 1 "../src/TestBench/sixbitprocessor_TB.vhd" 56 testbench_for_sixbitprocessor
+~C 1 "../src/TestBench/sixbitprocessorwithmultiplier_TB.vhd" 56 testbench_for_sixbitprocessorwithmultiplier

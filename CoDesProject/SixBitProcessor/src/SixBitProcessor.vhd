@@ -11,8 +11,42 @@ end SixBitProcessor;
 
 architecture SixBitProcessorArch of SixBitProcessor is	 
 
+-- signals			  										  
+-- "state_type" is type for control unit states
+type state_type is (S0,S1, HaltCheck, S2, S3, S4, S5, S6, S7);
+-- "std_logic_vector_array" is a type with 6 bits used for declare an array of 6bit values
+type std_logic_vector_array	is array (natural range <>) of std_logic_vector(5 downto 0);
+-- "std_logic_array" is a type with 1 bit used for declare an array of 1 bit values
+type std_logic_array	is array (natural range <>) of std_logic;  						
+-- "std_logic_array_2Bit" is a type with 2 bit used for declare an array of 2 bit values
+type std_logic_array_2Bit	is array (natural range <>) of std_logic_vector(1 downto 0);
+-- control unit states
+signal state_reg, state_next : state_type;
+-- "ROUT" and "RIN" in order are registers output and inputs that thier
+-- type is an array of 6 bit values with array size 4 (number of registers is 4)
+signal ROUT,RIN : std_logic_vector_array(0 to 3);
+-- "LD" and "ZR" are registers load and zero input that their type is
+-- an array of 1 bit values with array size 4
+signal LD,ZR : std_logic_array(0 to 3);		 
+-- "IRNext" and "PCNext" are inputs for IR and PC registers
+signal IRNext,PCNext : std_logic_vector (5 downto 0);		 
+-- MUX inputs and outputs and selector for selecting BUS value
+signal MData, DataBUS, ALURes: std_logic_vector(5 downto 0);
+signal BUSSel : std_logic; 
+-- ALU MUXs' selectors that "ALUINSelector" is an array with size 2 with 2 bit values
+signal ALUINSelector: std_logic_array_2Bit(1 downto 0);
+-- ALU IN1 and IN2 that "ALUIN" is an array with size 2 with 6 bit values
+signal ALUIN : std_logic_vector_array(1 downto 0);
+-- ALU CMD for selecting operator
+signal CMD : std_logic;	
+-- "IR" and "PC" are outputs for IR and PC registers
+signal IR,PC : std_logic_vector (5 downto 0);
+-- other IR and PC inputs
+signal LDPC,LDIR,INC,RST : std_logic;
+
+-- Memory
 type Memory_TYPE is array (63 downto 0) of std_logic_vector(5 downto 0);
-type State_t is (S0,S1, HaltCheck, S2, S3, S4, S5, S6, S7);
+
 
 signal Memory : Memory_TYPE := 
 ( 		 
@@ -39,33 +73,10 @@ signal Memory : Memory_TYPE :=
         others => "111111"   
 );
 
---FSM
-signal state_reg, state_next : State_t;  
--- Registers
-type std_logic_vector_array	is array (natural range <>) of std_logic_vector(5 downto 0);
-type std_logic_array	is array (natural range <>) of std_logic;
-signal ROUT,RIN : std_logic_vector_array(0 to 3);
-signal LD,ZR : std_logic_array(0 to 3);
-signal IR,PC : std_logic_vector (5 downto 0);			 
-signal IRNext,PCNext : std_logic_vector (5 downto 0);
---signal R0,R1,R2,R3,IR,PC : std_logic_vector (5 downto 0); 
---signal R0Next,R1Next,R2Next,R3Next,IRNext,PCNext : std_logic_vector (5 downto 0);
 
--- Controls
-signal MData, DataBUS, ALURes: std_logic_vector(5 downto 0);
-type std_logic_array_2Bit	is array (natural range <>) of std_logic_vector(1 downto 0);
-signal ALUINSelector: std_logic_array_2Bit(1 downto 0);
-signal ALUIN : std_logic_vector_array(1 downto 0);
-signal BUSSel,LDPC,LDIR,INC,RST,CMD : std_logic; 
- 
---Helpers for simpler code
-signal Z : std_logic_vector(3 downto 0);	 
-signal index : integer;	
 
 begin	   
 	
-	
-	index <= to_integer(unsigned(IR(3 downto 2)));
 	
 	-- 4 Registers (R0,R1,R2,R3)
 	Registers : for k in 0 to 3 generate   
@@ -81,7 +92,6 @@ begin
 		ZR(k) <= '1' when ROUT(k)="000000" else '0'; 
 			
 		RIN(k) <= DataBUS when LD(k)='1' else ROUT(k);	 
-		Z(k) <= ZR(k);
 	end generate Registers;
 	
 	--IR and PC Registers
@@ -99,15 +109,10 @@ begin
 	PCNext <= DataBUS when LDPC='1' else PC+1 when INC='1' else "000000" when RST='1' else PC;
 	IRNext <= DataBUS when LDIR='1' else IR;
 	
-	process(clk,reset)  
-	begin 	
-		if reset='1' then 
-			state_reg <= s0;
-		elsif (rising_edge(clk)) then			
-			state_reg <= state_next;
-		end if;
-	end process; 
 	
+	
+	
+	-- MUXs
 	ALUMUXs : for k in 0 to 1 generate	 
 		process(ROUT,ALUINSelector(k))
 		begin  
@@ -146,13 +151,12 @@ begin
 
 
 		
-
+	-- ALU
 	ALURes <= ALUIN(0)+ALUIN(1) when CMD='0' else ALUIN(0)-ALUIN(1);
 	 
 	
-	process(IR, Z, state_reg)
+	process(IR, ZR, state_reg)
 	begin
-	-- Initialize signals
 	CMD <= '0';
 	INC <= '0';
 	RST <= '0';
@@ -166,7 +170,7 @@ begin
 	ALUINSelector(1) <= "00";
 	BUSSel <= '0';
 
-	-- State transitions
+	-- control unit states
 	case state_reg is
 		when s0 =>
 			RST <= '1';
@@ -187,7 +191,7 @@ begin
 			elsif IR(5 downto 4) = "10" then
 				state_next <= s5;
 			elsif IR(5 downto 4) = "11" then
-				if Z(to_integer(unsigned(IR(3 downto 2)))) = '0' then
+				if ZR(to_integer(unsigned(IR(3 downto 2)))) = '0' then
 					state_next <= s6;
 				else
 					state_next <= s7;
@@ -230,5 +234,15 @@ begin
 
 	end case;
 	end process;
+	
+	-- process for setting control unit states
+	process(clk,reset)  
+	begin 	
+		if reset='1' then 
+			state_reg <= s0;
+		elsif (rising_edge(clk)) then			
+			state_reg <= state_next;
+		end if;
+	end process;  
 	
 end SixBitProcessorArch;

@@ -5,15 +5,15 @@ use ieee.std_logic_1164.all;
 
 	-- Add your library and packages declaration here ...
 
-entity sixbitprocessor_tb is
+entity sixbitprocessorwithmultiplier_tb is
 	-- Generic declarations of the tested unit
 		generic(
 		instruction_bits : POSITIVE := 7 );
-end sixbitprocessor_tb;
+end sixbitprocessorwithmultiplier_tb;
 
-architecture TB_ARCHITECTURE of sixbitprocessor_tb is
+architecture TB_ARCHITECTURE of sixbitprocessorwithmultiplier_tb is
 	-- Component declaration of the tested unit
-	component sixbitprocessor
+	component sixbitprocessorwithmultiplier
 		generic(
 		instruction_bits : POSITIVE := 7 );
 	port(
@@ -31,7 +31,7 @@ architecture TB_ARCHITECTURE of sixbitprocessor_tb is
 begin
 
 	-- Unit Under Test port map
-	UUT : sixbitprocessor
+	UUT : sixbitprocessorwithmultiplier
 		generic map (
 			instruction_bits => instruction_bits
 		)
@@ -42,7 +42,7 @@ begin
 		);
 
 	-- Add your stimulus here ...
-	reset <= '1', '0' after 10ns;
+	  reset <= '1', '0' after 10ns;
    
    process
    begin
@@ -53,11 +53,11 @@ begin
    end process;
 end TB_ARCHITECTURE;
 
-configuration TESTBENCH_FOR_sixbitprocessor of sixbitprocessor_tb is
+configuration TESTBENCH_FOR_sixbitprocessorwithmultiplier of sixbitprocessorwithmultiplier_tb is
 	for TB_ARCHITECTURE
-		for UUT : sixbitprocessor
-			use entity work.sixbitprocessor(sixbitprocessorarch);
+		for UUT : sixbitprocessorwithmultiplier
+			use entity work.sixbitprocessorwithmultiplier(sixbitprocessorwithmultiplierarch);
 		end for;
 	end for;
-end TESTBENCH_FOR_sixbitprocessor;
+end TESTBENCH_FOR_sixbitprocessorwithmultiplier;
 

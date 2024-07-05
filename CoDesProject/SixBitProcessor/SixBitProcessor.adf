@@ -21,16 +21,18 @@ FAMILY=
 /SixBitProcessorWithMultiplier.vhd=-1
 TestBench/sixbitprocessor_TB.vhd=-1
 TestBench/sixbitprocessor_TB_runtest.do=-1
-TestBench/sixbitprocessor_TB.vhd=-1
+TestBench/sixbitprocessorwithmultiplier_TB.vhd=-1
+TestBench/sixbitprocessorwithmultiplier_TB_runtest.do=-1
 [Files.Data]
 .\src\SixBitProcessor.vhd=VHDL Source Code
 .\src\SixBitProcessorWithMultiplier.vhd=VHDL Source Code
 .\src\TestBench\sixbitprocessor_TB.vhd=VHDL Test Bench
 .\src\TestBench\sixbitprocessor_TB_runtest.do=Macro
-.\src\TestBench\sixbitprocessor_TB.vhd=VHDL Test Bench
+.\src\TestBench\sixbitprocessorwithmultiplier_TB.vhd=VHDL Test Bench
+.\src\TestBench\sixbitprocessorwithmultiplier_TB_runtest.do=Macro
 [Groups]
 TestBench=1
 [HierarchyViewer]
-HierarchyInformation=sixbitprocessor|SixBitProcessorArch|0 sixbitprocessor_tb|testbench_for_sixbitprocessor|1
+HierarchyInformation=sixbitprocessor_tb|testbench_for_sixbitprocessor|1 sixbitprocessorwithmultiplier_tb|testbench_for_sixbitprocessorwithmultiplier|1
 ShowHide=ShowTopLevel
 Selected=
