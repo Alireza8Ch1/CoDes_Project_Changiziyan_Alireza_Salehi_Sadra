@@ -42,7 +42,7 @@ begin
 		);
 
 	-- Add your stimulus here ...
-	  reset <= '1', '0' after 10ns;
+	        reset <= '1', '0' after 10ns;
    
    process
    begin

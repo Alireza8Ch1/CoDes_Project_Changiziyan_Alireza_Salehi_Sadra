@@ -13,7 +13,7 @@ architecture SixBitProcessorArch of SixBitProcessor is
 
 -- signals			  										  
 -- "state_type" is type for control unit states
-type state_type is (S0,S1, HaltCheck, S2, S3, S4, S5, S6, S7);	 
+type state_type is (S0,S1, HLT, S2, S3, S4, S5, S6, S7);	 
 
 -- "std_logic_vector_array" is a type with 6 bits used for declare an array of 6bit values
 type std_logic_vector_array	is array (natural range <>) of std_logic_vector(5 downto 0);   
@@ -101,10 +101,7 @@ begin
 				ROUT(k) <= DataBUS;
 			end if;
 		end process;					  
-		--Set ZR signal
-		ZR(k) <= '1' when ROUT(k)="000000" else '0'; 
-			
-		--RIN(k) <= DataBUS when LD(k)='1' else ROUT(k);	 
+		ZR(k) <= '1' when ROUT(k)="000000" else '0';  
 	end generate Registers;
 	
 	--IR and PC Registers
@@ -127,13 +124,9 @@ begin
 			elsif RST='1' then
 				PC <= (others => '0');
 			end if;	
-			--IR <= IRNext;
-			--PC <= PCNext;
 		end if;
 	end process;
 	
-	--PCNext <= DataBUS when LDPC='1' else PC+1 when INC='1' else "000000" when RST='1' else PC;
-	--IRNext <= DataBUS when LDIR='1' else IR;
 	
 	
 	
@@ -194,65 +187,64 @@ begin
 	
 	-- control unit states
 	case state_reg is
-		when s0 =>
+		when S0 =>
 			RST <= '1';
-			state_next <= s1;
+			state_next <= S1;
 			
-		when s1 =>
+		when S1 =>
 			LDIR <= '1';
 			INC <= '1';
 			BUSSel <= '0';
-			state_next <=  HaltCheck;
-		when HaltCheck =>
+			state_next <=  HLT;
+		when HLT =>
 			if IR = "111111" then
-				state_next <= s2;
+				state_next <= S2;
 			elsif IR(5 downto 4) = "00" then
-				state_next <= s3;
+				state_next <= S3;
 			elsif IR(5 downto 4) = "01" then
-				state_next <= s4;
+				state_next <= S4;
 			elsif IR(5 downto 4) = "10" then
-				state_next <= s5;
+				state_next <= S5;
 			elsif IR(5 downto 4) = "11" then
 				if ZR(to_integer(unsigned(IR(3 downto 2)))) = '0' then
-					state_next <= s6;
+					state_next <= S6;
 				else
-					state_next <= s7;
+					state_next <= S7;
 				end if;
 			end if;
-		when s2 =>
-			state_next <= s2;
+		when S2 =>
+			state_next <= S2;
 
-		when s3 =>	   
+		when S3 =>	   
 			LD(to_integer(unsigned(IR(3 downto 2))))<='1';
 			INC <= '1';
 			BUSSel <= '0';	
-			state_next <= s1;
+			state_next <= S1;
 			
 
-		when s4 =>
+		when S4 =>
 			LD(to_integer(unsigned(IR(3 downto 2))))<='1';
 			CMD <= '0';
 			ALUINSelector(0) <= IR(3 downto 2);
 			ALUINSelector(1) <= IR(1 downto 0);
 			BUSSel <= '1';
-			state_next <= s1;
+			state_next <= S1;
 
-		when s5 =>
+		when S5 =>
 			LD(to_integer(unsigned(IR(3 downto 2))))<='1';
 			CMD <= '1';	 
 			ALUINSelector(0) <= IR(3 downto 2);
 			ALUINSelector(1) <= IR(1 downto 0);
 			BUSSel <= '1';
-			state_next <= s1;
+			state_next <= S1;
 
-		when s6 =>
-			
+		when S6 =>
 			LDPC <= '1';
 			BUSSel <= '0';
-			state_next <= s1;
-		when s7 =>	
+			state_next <= S1;
+		when S7 =>	
 			INC <= '1';
-			state_next <= s1;
+			state_next <= S1;
 
 	end case;
 	end process;

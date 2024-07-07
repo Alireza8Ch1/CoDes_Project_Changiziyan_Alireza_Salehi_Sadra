@@ -1,33 +1,155 @@
 # ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/SixBitProcessor.vhd
+# ELBREAD: Elaboration time 0.1 [s].
+acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/SixBitProcessorWithMultiplier.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessor.vhd
-# Compile Entity "SixBitProcessor"
-# Compile Architecture "SixBitProcessorArch" of Entity "SixBitProcessor"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/TestBench/sixbitprocessor_TB.vhd
+# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessorWithMultiplier.vhd
+# Compile Entity "SixBitProcessorWithMultiplier"
+# Compile Architecture "SixBitProcessorWithMultiplierArch" of Entity "SixBitProcessorWithMultiplier"
+# Warning: COMP96_0349: SixBitProcessorWithMultiplier.vhd : (73, 2): Aggregate with multiple choices has a non-static or null choice.
+# Compile success 0 Errors 1 Warnings  Analysis time :  94.0 [ms]
+acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/TestBench/sixbitprocessorwithmultiplier_TB.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/TestBench/sixbitprocessor_TB.vhd
-# Compile Entity "sixbitprocessor_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "sixbitprocessor_tb"
-# Compile Configuration "TESTBENCH_FOR_sixbitprocessor"
+# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/TestBench/sixbitprocessorwithmultiplier_TB.vhd
+# Compile Entity "sixbitprocessorwithmultiplier_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "sixbitprocessorwithmultiplier_tb"
+# Compile Configuration "TESTBENCH_FOR_sixbitprocessorwithmultiplier"
 # Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
 SetActiveLib -work
-comp -include "$dsn\src\SixBitProcessor.vhd" 
+comp -include "$dsn\src\SixBitProcessorWithMultiplier.vhd" 
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessor.vhd
-# Compile Entity "SixBitProcessor"
-# Compile Architecture "SixBitProcessorArch" of Entity "SixBitProcessor"
-# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
-comp -include "$dsn\src\TestBench\sixbitprocessor_TB.vhd" 
+# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessorWithMultiplier.vhd
+# Compile Entity "SixBitProcessorWithMultiplier"
+# Compile Architecture "SixBitProcessorWithMultiplierArch" of Entity "SixBitProcessorWithMultiplier"
+# Warning: COMP96_0349: SixBitProcessorWithMultiplier.vhd : (73, 2): Aggregate with multiple choices has a non-static or null choice.
+# Compile success 0 Errors 1 Warnings  Analysis time :  47.0 [ms]
+comp -include "$dsn\src\TestBench\sixbitprocessorwithmultiplier_TB.vhd" 
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/TestBench/sixbitprocessor_TB.vhd
-# Compile Entity "sixbitprocessor_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "sixbitprocessor_tb"
-# Compile Configuration "TESTBENCH_FOR_sixbitprocessor"
+# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/TestBench/sixbitprocessorwithmultiplier_TB.vhd
+# Compile Entity "sixbitprocessorwithmultiplier_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "sixbitprocessorwithmultiplier_tb"
+# Compile Configuration "TESTBENCH_FOR_sixbitprocessorwithmultiplier"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+asim +access +r TESTBENCH_FOR_sixbitprocessorwithmultiplier 
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6616 kB (elbread=427 elab2=6045 kernel=143 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\zephyrus\Desktop\CoDes_Project_Changiziyan_Alireza_Salehi_Sadra\CoDesProject\SixBitProcessor\src\wave.asdb
+#  1:47 PM, Sunday, July 7, 2024
+#  Simulation has been initialized
+wave 
+wave -noreg clk
+wave -noreg reset
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\sixbitprocessorwithmultiplier_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_sixbitprocessorwithmultiplier 
+# VSIM: 2 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/wave.asdb'.
+# add wave -noreg {/sixbitprocessorwithmultiplier_tb/UUT/ROUT}
+# VSIM: 1 object(s) traced.
+run 100 ns
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessorwithmultiplier_tb/UUT,  Process: line__174.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessorwithmultiplier_tb/UUT,  Process: line__178.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessorwithmultiplier_tb/UUT,  Process: line__181.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessorwithmultiplier_tb/UUT,  Process: line__181.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessorwithmultiplier_tb/UUT/Registers__0,  Process: line__93.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessorwithmultiplier_tb/UUT/Registers__1,  Process: line__93.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessorwithmultiplier_tb/UUT/Registers__2,  Process: line__93.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessorwithmultiplier_tb/UUT/Registers__3,  Process: line__93.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 2,  Instance: /sixbitprocessorwithmultiplier_tb/UUT,  Process: line__178.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 2,  Instance: /sixbitprocessorwithmultiplier_tb/UUT,  Process: line__181.
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 10 ns,  Iteration: 2,  Instance: /sixbitprocessorwithmultiplier_tb/UUT,  Process: line__174.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 30 ns,  Iteration: 1,  Instance: /sixbitprocessorwithmultiplier_tb/UUT,  Process: line__111.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 30 ns,  Iteration: 2,  Instance: /sixbitprocessorwithmultiplier_tb/UUT,  Process: line__184.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 30 ns,  Iteration: 2,  Instance: /sixbitprocessorwithmultiplier_tb/UUT,  Process: line__184.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 30 ns,  Iteration: 2,  Instance: /sixbitprocessorwithmultiplier_tb/UUT,  Process: line__184.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 30 ns,  Iteration: 2,  Instance: /sixbitprocessorwithmultiplier_tb/UUT,  Process: line__184.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 30 ns,  Iteration: 2,  Instance: /sixbitprocessorwithmultiplier_tb/UUT,  Process: line__184.
+# KERNEL: stopped at time: 100 ns
+# add wave -noreg {/sixbitprocessorwithmultiplier_tb/UUT/state_reg}
+# VSIM: 1 object(s) traced.
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/SixBitProcessorWithMultiplier.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessorWithMultiplier.vhd
+# Compile Entity "SixBitProcessorWithMultiplier"
+# Compile Architecture "SixBitProcessorWithMultiplierArch" of Entity "SixBitProcessorWithMultiplier"
+# Warning: COMP96_0349: SixBitProcessorWithMultiplier.vhd : (73, 2): Aggregate with multiple choices has a non-static or null choice.
+# Compile success 0 Errors 1 Warnings  Analysis time :  63.0 [ms]
+acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/TestBench/sixbitprocessorwithmultiplier_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/TestBench/sixbitprocessorwithmultiplier_TB.vhd
+# Compile Entity "sixbitprocessorwithmultiplier_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "sixbitprocessorwithmultiplier_tb"
+# Compile Configuration "TESTBENCH_FOR_sixbitprocessorwithmultiplier"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\SixBitProcessorWithMultiplier.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessorWithMultiplier.vhd
+# Compile Entity "SixBitProcessorWithMultiplier"
+# Compile Architecture "SixBitProcessorWithMultiplierArch" of Entity "SixBitProcessorWithMultiplier"
+# Warning: COMP96_0349: SixBitProcessorWithMultiplier.vhd : (73, 2): Aggregate with multiple choices has a non-static or null choice.
+# Compile success 0 Errors 1 Warnings  Analysis time :  47.0 [ms]
+comp -include "$dsn\src\TestBench\sixbitprocessorwithmultiplier_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/TestBench/sixbitprocessorwithmultiplier_TB.vhd
+# Compile Entity "sixbitprocessorwithmultiplier_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "sixbitprocessorwithmultiplier_tb"
+# Compile Configuration "TESTBENCH_FOR_sixbitprocessorwithmultiplier"
 # Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
-asim +access +r TESTBENCH_FOR_sixbitprocessor 
+asim +access +r TESTBENCH_FOR_sixbitprocessorwithmultiplier 
+# VSIM: Simulation has finished.
 # ELBREAD: Elaboration process.
 # ELBREAD: Elaboration time 0.0 [s].
 # VSIM: Stack memory: 32MB
@@ -44,10 +166,208 @@ asim +access +r TESTBENCH_FOR_sixbitprocessor
 # SLP: Finished : 0.0 [s]
 # ELAB2: Elaboration final pass complete - time: 0.0 [s].
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 6606 kB (elbread=427 elab2=6037 kernel=142 sdf=0)
+# Allocation: Simulator allocated 6614 kB (elbread=427 elab2=6043 kernel=143 sdf=0)
 # KERNEL: ASDB file was created in location C:\Users\zephyrus\Desktop\CoDes_Project_Changiziyan_Alireza_Salehi_Sadra\CoDesProject\SixBitProcessor\src\wave.asdb
-#  6:26 PM, Friday, July 5, 2024
+#  1:50 PM, Sunday, July 7, 2024
 #  Simulation has been initialized
+wave 
+wave -noreg clk
+wave -noreg reset
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\sixbitprocessorwithmultiplier_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_sixbitprocessorwithmultiplier 
+# VSIM: 2 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/wave.asdb'.
+# add wave -noreg {/sixbitprocessorwithmultiplier_tb/UUT/state_reg}
+# VSIM: 1 object(s) traced.
+# add wave -noreg {/sixbitprocessorwithmultiplier_tb/UUT/ROUT}
+# VSIM: 1 object(s) traced.
+run 100 ns
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessorwithmultiplier_tb/UUT,  Process: line__163.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessorwithmultiplier_tb/UUT,  Process: line__167.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessorwithmultiplier_tb/UUT,  Process: line__170.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessorwithmultiplier_tb/UUT,  Process: line__170.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessorwithmultiplier_tb/UUT/Registers__0,  Process: line__93.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessorwithmultiplier_tb/UUT/Registers__1,  Process: line__93.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessorwithmultiplier_tb/UUT/Registers__2,  Process: line__93.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessorwithmultiplier_tb/UUT/Registers__3,  Process: line__93.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 2,  Instance: /sixbitprocessorwithmultiplier_tb/UUT,  Process: line__167.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 2,  Instance: /sixbitprocessorwithmultiplier_tb/UUT,  Process: line__170.
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/SixBitProcessorWithMultiplier.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessorWithMultiplier.vhd
+# Compile Entity "SixBitProcessorWithMultiplier"
+# Compile Architecture "SixBitProcessorWithMultiplierArch" of Entity "SixBitProcessorWithMultiplier"
+# Warning: COMP96_0349: SixBitProcessorWithMultiplier.vhd : (73, 2): Aggregate with multiple choices has a non-static or null choice.
+# Compile success 0 Errors 1 Warnings  Analysis time :  63.0 [ms]
+acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/TestBench/sixbitprocessorwithmultiplier_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/TestBench/sixbitprocessorwithmultiplier_TB.vhd
+# Compile Entity "sixbitprocessorwithmultiplier_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "sixbitprocessorwithmultiplier_tb"
+# Compile Configuration "TESTBENCH_FOR_sixbitprocessorwithmultiplier"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\SixBitProcessorWithMultiplier.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessorWithMultiplier.vhd
+# Compile Entity "SixBitProcessorWithMultiplier"
+# Compile Architecture "SixBitProcessorWithMultiplierArch" of Entity "SixBitProcessorWithMultiplier"
+# Warning: COMP96_0349: SixBitProcessorWithMultiplier.vhd : (73, 2): Aggregate with multiple choices has a non-static or null choice.
+# Compile success 0 Errors 1 Warnings  Analysis time :  62.0 [ms]
+comp -include "$dsn\src\TestBench\sixbitprocessorwithmultiplier_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/TestBench/sixbitprocessorwithmultiplier_TB.vhd
+# Compile Entity "sixbitprocessorwithmultiplier_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "sixbitprocessorwithmultiplier_tb"
+# Compile Configuration "TESTBENCH_FOR_sixbitprocessorwithmultiplier"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+asim +access +r TESTBENCH_FOR_sixbitprocessorwithmultiplier 
+# VSIM: Simulation has finished.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6614 kB (elbread=427 elab2=6043 kernel=143 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\zephyrus\Desktop\CoDes_Project_Changiziyan_Alireza_Salehi_Sadra\CoDesProject\SixBitProcessor\src\wave.asdb
+#  1:53 PM, Sunday, July 7, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/wave.asdb'.
+wave 
+wave -noreg clk
+wave -noreg reset
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\sixbitprocessorwithmultiplier_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_sixbitprocessorwithmultiplier 
+# VSIM: 2 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/wave.asdb'.
+# add wave -noreg {/sixbitprocessorwithmultiplier_tb/UUT/state_reg}
+# VSIM: 1 object(s) traced.
+# add wave -noreg {/sixbitprocessorwithmultiplier_tb/UUT/ROUT}
+# VSIM: 1 object(s) traced.
+run 100 ns
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessorwithmultiplier_tb/UUT,  Process: line__163.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessorwithmultiplier_tb/UUT,  Process: line__167.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessorwithmultiplier_tb/UUT,  Process: line__170.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessorwithmultiplier_tb/UUT,  Process: line__170.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessorwithmultiplier_tb/UUT/Registers__0,  Process: line__93.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessorwithmultiplier_tb/UUT/Registers__1,  Process: line__93.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessorwithmultiplier_tb/UUT/Registers__2,  Process: line__93.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessorwithmultiplier_tb/UUT/Registers__3,  Process: line__93.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 2,  Instance: /sixbitprocessorwithmultiplier_tb/UUT,  Process: line__167.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 2,  Instance: /sixbitprocessorwithmultiplier_tb/UUT,  Process: line__170.
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/SixBitProcessor.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessor.vhd
+# Compile Entity "SixBitProcessor"
+# Compile Architecture "SixBitProcessorArch" of Entity "SixBitProcessor"
+# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/SixBitProcessor.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessor.vhd
+# Compile Entity "SixBitProcessor"
+# Compile Architecture "SixBitProcessorArch" of Entity "SixBitProcessor"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/TestBench/sixbitprocessor_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/TestBench/sixbitprocessor_TB.vhd
+# Compile Entity "sixbitprocessor_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "sixbitprocessor_tb"
+# Compile Configuration "TESTBENCH_FOR_sixbitprocessor"
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\SixBitProcessor.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessor.vhd
+# Compile Entity "SixBitProcessor"
+# Compile Architecture "SixBitProcessorArch" of Entity "SixBitProcessor"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+comp -include "$dsn\src\TestBench\sixbitprocessor_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/TestBench/sixbitprocessor_TB.vhd
+# Compile Entity "sixbitprocessor_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "sixbitprocessor_tb"
+# Compile Configuration "TESTBENCH_FOR_sixbitprocessor"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+asim +access +r TESTBENCH_FOR_sixbitprocessor 
+# VSIM: Simulation has finished.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6605 kB (elbread=427 elab2=6035 kernel=141 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\zephyrus\Desktop\CoDes_Project_Changiziyan_Alireza_Salehi_Sadra\CoDesProject\SixBitProcessor\src\wave.asdb
+#  2:05 PM, Sunday, July 7, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/wave.asdb'.
 wave 
 wave -noreg clk
 wave -noreg reset
@@ -59,11 +379,13 @@ wave -noreg reset
 # Waveform file 'untitled.awc' connected to 'C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/wave.asdb'.
 # add wave -noreg {/sixbitprocessor_tb/UUT/ROUT}
 # VSIM: 1 object(s) traced.
+# add wave -noreg {/sixbitprocessor_tb/UUT/state_reg}
+# VSIM: 1 object(s) traced.
 run 100 ns
 # KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT,  Process: line__162.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT,  Process: line__174.
 # KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT,  Process: line__168.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT,  Process: line__181.
 # KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 # KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT/Registers__0,  Process: line__105.
 # KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
@@ -73,7 +395,7 @@ run 100 ns
 # KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 # KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT/Registers__3,  Process: line__105.
 # KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 2,  Instance: /sixbitprocessor_tb/UUT,  Process: line__168.
+# KERNEL: Time: 0 ps,  Iteration: 2,  Instance: /sixbitprocessor_tb/UUT,  Process: line__181.
 # KERNEL: stopped at time: 100 ns
 run 100 ns
 # KERNEL: stopped at time: 200 ns
@@ -113,336 +435,155 @@ run 100 ns
 # KERNEL: stopped at time: 1900 ns
 run 100 ns
 # KERNEL: stopped at time: 2 us
+run 100 ns
+# KERNEL: stopped at time: 2100 ns
 acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/SixBitProcessorWithMultiplier.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
 # File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessorWithMultiplier.vhd
 # Compile Entity "SixBitProcessorWithMultiplier"
 # Compile Architecture "SixBitProcessorWithMultiplierArch" of Entity "SixBitProcessorWithMultiplier"
-# Warning: COMP96_0349: SixBitProcessorWithMultiplier.vhd : (60, 2): Aggregate with multiple choices has a non-static or null choice.
-# Compile success 0 Errors 1 Warnings  Analysis time :  78.0 [ms]
-acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/SixBitProcessor.vhd
+# Warning: COMP96_0349: SixBitProcessorWithMultiplier.vhd : (73, 2): Aggregate with multiple choices has a non-static or null choice.
+# Compile success 0 Errors 1 Warnings  Analysis time :  63.0 [ms]
+acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/SixBitProcessorWithMultiplier.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessor.vhd
-# Compile Entity "SixBitProcessor"
-# Compile Architecture "SixBitProcessorArch" of Entity "SixBitProcessor"
-# Error: COMP96_0019: SixBitProcessor.vhd : (131, 6): Keyword 'if' expected.
-# Error: COMP96_0015: SixBitProcessor.vhd : (131, 6): ';' expected.
-# Error: COMP96_0019: SixBitProcessor.vhd : (140, 28): Keyword 'loop' expected.
-# Error: COMP96_0019: SixBitProcessor.vhd : (155, 7): Keyword 'if' expected.
-# Error: COMP96_0015: SixBitProcessor.vhd : (155, 7): ';' expected.
-# Error: COMP96_0019: SixBitProcessor.vhd : (156, 6): Keyword 'process' expected.
-# Compile failure 6 Errors 0 Warnings  Analysis time :  15.0 [ms]
-acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/SixBitProcessor.vhd
+# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessorWithMultiplier.vhd
+# Compile Entity "SixBitProcessorWithMultiplier"
+# Compile Architecture "SixBitProcessorWithMultiplierArch" of Entity "SixBitProcessorWithMultiplier"
+# Error: COMP96_0331: SixBitProcessorWithMultiplier.vhd : (68, 1): Syntax error in expression.
+# Error: COMP96_0015: SixBitProcessorWithMultiplier.vhd : (68, 2): ')' expected.
+# Error: COMP96_0015: SixBitProcessorWithMultiplier.vhd : (70, 1): ';' expected.
+# Compile failure 3 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/SixBitProcessorWithMultiplier.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessor.vhd
-# Compile Entity "SixBitProcessor"
-# Compile Architecture "SixBitProcessorArch" of Entity "SixBitProcessor"
-# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
-acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/TestBench/sixbitprocessor_TB.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/TestBench/sixbitprocessor_TB.vhd
-# Compile Entity "sixbitprocessor_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "sixbitprocessor_tb"
-# Compile Configuration "TESTBENCH_FOR_sixbitprocessor"
-# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
-SetActiveLib -work
-comp -include "$dsn\src\SixBitProcessor.vhd" 
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessor.vhd
-# Compile Entity "SixBitProcessor"
-# Compile Architecture "SixBitProcessorArch" of Entity "SixBitProcessor"
-# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
-comp -include "$dsn\src\TestBench\sixbitprocessor_TB.vhd" 
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/TestBench/sixbitprocessor_TB.vhd
-# Compile Entity "sixbitprocessor_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "sixbitprocessor_tb"
-# Compile Configuration "TESTBENCH_FOR_sixbitprocessor"
-# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
-asim +access +r TESTBENCH_FOR_sixbitprocessor 
-# VSIM: Simulation has finished.
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 6604 kB (elbread=427 elab2=6035 kernel=142 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\zephyrus\Desktop\CoDes_Project_Changiziyan_Alireza_Salehi_Sadra\CoDesProject\SixBitProcessor\src\wave.asdb
-#  6:37 PM, Friday, July 5, 2024
-#  Simulation has been initialized
-wave 
-wave -noreg clk
-wave -noreg reset
-# # The following lines can be used for timing simulation
-# # acom <backannotated_vhdl_file_name>
-# # comp -include "$dsn\src\TestBench\sixbitprocessor_TB_tim_cfg.vhd" 
-# # asim +access +r TIMING_FOR_sixbitprocessor 
-# VSIM: 2 object(s) traced.
-# Waveform file 'untitled.awc' connected to 'C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/wave.asdb'.
-# add wave -noreg {/sixbitprocessor_tb/UUT/ROUT}
-# VSIM: 1 object(s) traced.
-run 100 ns
-# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT,  Process: line__175.
-# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT,  Process: line__181.
-# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT/Registers__0,  Process: line__105.
-# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT/Registers__1,  Process: line__105.
-# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT/Registers__2,  Process: line__105.
-# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT/Registers__3,  Process: line__105.
-# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 2,  Instance: /sixbitprocessor_tb/UUT,  Process: line__181.
-# KERNEL: stopped at time: 100 ns
-run 100 ns
-# KERNEL: stopped at time: 200 ns
-run 100 ns
-# KERNEL: stopped at time: 300 ns
-run 100 ns
-# KERNEL: stopped at time: 400 ns
-run 100 ns
-# KERNEL: stopped at time: 500 ns
-run 100 ns
-# KERNEL: stopped at time: 600 ns
-run 100 ns
-# KERNEL: stopped at time: 700 ns
-run 100 ns
-# KERNEL: stopped at time: 800 ns
-run 100 ns
-# KERNEL: stopped at time: 900 ns
-run 100 ns
-# KERNEL: stopped at time: 1 us
-run 100 ns
-# KERNEL: stopped at time: 1100 ns
-run 100 ns
-# KERNEL: stopped at time: 1200 ns
-run 100 ns
-# KERNEL: stopped at time: 1300 ns
-run 100 ns
-# KERNEL: stopped at time: 1400 ns
-run 100 ns
-# KERNEL: stopped at time: 1500 ns
-run 100 ns
-# KERNEL: stopped at time: 1600 ns
-run 100 ns
-# KERNEL: stopped at time: 1700 ns
-run 100 ns
-# KERNEL: stopped at time: 1800 ns
-acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/SixBitProcessor.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessor.vhd
-# Compile Entity "SixBitProcessor"
-# Compile Architecture "SixBitProcessorArch" of Entity "SixBitProcessor"
-# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
-acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/SixBitProcessor.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessor.vhd
-# Compile Entity "SixBitProcessor"
-# Compile Architecture "SixBitProcessorArch" of Entity "SixBitProcessor"
-# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
-acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/TestBench/sixbitprocessor_TB.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/TestBench/sixbitprocessor_TB.vhd
-# Compile Entity "sixbitprocessor_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "sixbitprocessor_tb"
-# Compile Configuration "TESTBENCH_FOR_sixbitprocessor"
-# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
-SetActiveLib -work
-comp -include "$dsn\src\SixBitProcessor.vhd" 
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessor.vhd
-# Compile Entity "SixBitProcessor"
-# Compile Architecture "SixBitProcessorArch" of Entity "SixBitProcessor"
-# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
-comp -include "$dsn\src\TestBench\sixbitprocessor_TB.vhd" 
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/TestBench/sixbitprocessor_TB.vhd
-# Compile Entity "sixbitprocessor_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "sixbitprocessor_tb"
-# Compile Configuration "TESTBENCH_FOR_sixbitprocessor"
-# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
-asim +access +r TESTBENCH_FOR_sixbitprocessor 
-# VSIM: Simulation has finished.
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 6604 kB (elbread=427 elab2=6035 kernel=141 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\zephyrus\Desktop\CoDes_Project_Changiziyan_Alireza_Salehi_Sadra\CoDesProject\SixBitProcessor\src\wave.asdb
-#  6:46 PM, Friday, July 5, 2024
-#  Simulation has been initialized
-wave 
-wave -noreg clk
-wave -noreg reset
-# # The following lines can be used for timing simulation
-# # acom <backannotated_vhdl_file_name>
-# # comp -include "$dsn\src\TestBench\sixbitprocessor_TB_tim_cfg.vhd" 
-# # asim +access +r TIMING_FOR_sixbitprocessor 
-# VSIM: 2 object(s) traced.
-# Waveform file 'untitled.awc' connected to 'C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/wave.asdb'.
-# add wave -noreg {/sixbitprocessor_tb/UUT/LD}
-# VSIM: 1 object(s) traced.
-run 100 ns
-# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT,  Process: line__174.
-# RUNTIME: Fatal Error: RUNTIME_0047 SixBitProcessor.vhd (175): Index -2147483648 out of range (63 downto 0).
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT,  Process: line__175.
-# KERNEL: Stopped at time 0 ps + 0.
-# VSIM: Error: Fatal error occurred during simulation.
-acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/SixBitProcessor.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessor.vhd
-# Compile Entity "SixBitProcessor"
-# Compile Architecture "SixBitProcessorArch" of Entity "SixBitProcessor"
+# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessorWithMultiplier.vhd
+# Compile Entity "SixBitProcessorWithMultiplier"
+# Compile Architecture "SixBitProcessorWithMultiplierArch" of Entity "SixBitProcessorWithMultiplier"
 # Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
-acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/TestBench/sixbitprocessor_TB.vhd
+acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/SixBitProcessorWithMultiplier.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/TestBench/sixbitprocessor_TB.vhd
-# Compile Entity "sixbitprocessor_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "sixbitprocessor_tb"
-# Compile Configuration "TESTBENCH_FOR_sixbitprocessor"
-# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
-SetActiveLib -work
-comp -include "$dsn\src\SixBitProcessor.vhd" 
+# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessorWithMultiplier.vhd
+# Compile Entity "SixBitProcessorWithMultiplier"
+# Compile Architecture "SixBitProcessorWithMultiplierArch" of Entity "SixBitProcessorWithMultiplier"
+# Warning: COMP96_0349: SixBitProcessorWithMultiplier.vhd : (79, 9): Aggregate with multiple choices has a non-static or null choice.
+# Compile success 0 Errors 1 Warnings  Analysis time :  62.0 [ms]
+acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/SixBitProcessorWithMultiplier.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessor.vhd
-# Compile Entity "SixBitProcessor"
-# Compile Architecture "SixBitProcessorArch" of Entity "SixBitProcessor"
-# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
-comp -include "$dsn\src\TestBench\sixbitprocessor_TB.vhd" 
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/TestBench/sixbitprocessor_TB.vhd
-# Compile Entity "sixbitprocessor_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "sixbitprocessor_tb"
-# Compile Configuration "TESTBENCH_FOR_sixbitprocessor"
-# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
-asim +access +r TESTBENCH_FOR_sixbitprocessor 
-# VSIM: Simulation has finished.
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 6604 kB (elbread=427 elab2=6035 kernel=141 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\zephyrus\Desktop\CoDes_Project_Changiziyan_Alireza_Salehi_Sadra\CoDesProject\SixBitProcessor\src\wave.asdb
-#  6:49 PM, Friday, July 5, 2024
-#  Simulation has been initialized
-# Waveform file 'untitled.awc' connected to 'C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/wave.asdb'.
-wave 
-wave -noreg clk
-wave -noreg reset
-# # The following lines can be used for timing simulation
-# # acom <backannotated_vhdl_file_name>
-# # comp -include "$dsn\src\TestBench\sixbitprocessor_TB_tim_cfg.vhd" 
-# # asim +access +r TIMING_FOR_sixbitprocessor 
-# VSIM: 2 object(s) traced.
-# Waveform file 'untitled.awc' connected to 'C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/wave.asdb'.
-# add wave -noreg {/sixbitprocessor_tb/UUT/LD}
-# VSIM: 1 object(s) traced.
-run 100 ns
-# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT,  Process: line__174.
-# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT,  Process: line__175.
-# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT,  Process: line__181.
-# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT/Registers__0,  Process: line__105.
-# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT/Registers__1,  Process: line__105.
-# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT/Registers__2,  Process: line__105.
-# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT/Registers__3,  Process: line__105.
-# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 2,  Instance: /sixbitprocessor_tb/UUT,  Process: line__181.
-# KERNEL: stopped at time: 100 ns
-run 100 ns
-# KERNEL: stopped at time: 200 ns
-# add wave -noreg {/sixbitprocessor_tb/UUT/ROUT}
-# VSIM: 1 object(s) traced.
-run 100 ns
-# KERNEL: stopped at time: 300 ns
-run 100 ns
-# KERNEL: stopped at time: 400 ns
-run 100 ns
-# KERNEL: stopped at time: 500 ns
-run 100 ns
-# KERNEL: stopped at time: 600 ns
-run 100 ns
-# KERNEL: stopped at time: 700 ns
-run 100 ns
-# KERNEL: stopped at time: 800 ns
-run 100 ns
-# KERNEL: stopped at time: 900 ns
-run 100 ns
-# KERNEL: stopped at time: 1 us
-run 100 ns
-# KERNEL: stopped at time: 1100 ns
-run 100 ns
-# KERNEL: stopped at time: 1200 ns
-run 100 ns
-# KERNEL: stopped at time: 1300 ns
-run 100 ns
-# KERNEL: stopped at time: 1400 ns
-run 100 ns
-# KERNEL: stopped at time: 1500 ns
-run 100 ns
-# KERNEL: stopped at time: 1600 ns
-run 100 ns
-# KERNEL: stopped at time: 1700 ns
-run 100 ns
-# KERNEL: stopped at time: 1800 ns
-acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/SixBitProcessor.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessor.vhd
-# Compile Entity "SixBitProcessor"
-# Compile Architecture "SixBitProcessorArch" of Entity "SixBitProcessor"
-# Error: COMP96_0015: SixBitProcessor.vhd : (175, 50): ')' expected.
+# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessorWithMultiplier.vhd
+# Compile Entity "SixBitProcessorWithMultiplier"
+# Compile Architecture "SixBitProcessorWithMultiplierArch" of Entity "SixBitProcessorWithMultiplier"
+# Error: COMP96_0331: SixBitProcessorWithMultiplier.vhd : (74, 1): Syntax error in expression.
 # Compile failure 1 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/SixBitProcessorWithMultiplier.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessorWithMultiplier.vhd
+# Compile Entity "SixBitProcessorWithMultiplier"
+# Compile Architecture "SixBitProcessorWithMultiplierArch" of Entity "SixBitProcessorWithMultiplier"
+# Warning: COMP96_0349: SixBitProcessorWithMultiplier.vhd : (73, 2): Aggregate with multiple choices has a non-static or null choice.
+# Compile success 0 Errors 1 Warnings  Analysis time :  63.0 [ms]
+acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/SixBitProcessorWithMultiplier.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessorWithMultiplier.vhd
+# Compile Entity "SixBitProcessorWithMultiplier"
+# Compile Architecture "SixBitProcessorWithMultiplierArch" of Entity "SixBitProcessorWithMultiplier"
+# Warning: COMP96_0349: SixBitProcessorWithMultiplier.vhd : (73, 2): Aggregate with multiple choices has a non-static or null choice.
+# Compile success 0 Errors 1 Warnings  Analysis time :  62.0 [ms]
+acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/TestBench/sixbitprocessorwithmultiplier_TB.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/TestBench/sixbitprocessorwithmultiplier_TB.vhd
+# Compile Entity "sixbitprocessorwithmultiplier_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "sixbitprocessorwithmultiplier_tb"
+# Compile Configuration "TESTBENCH_FOR_sixbitprocessorwithmultiplier"
+# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+SetActiveLib -work
+comp -include "$dsn\src\SixBitProcessorWithMultiplier.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessorWithMultiplier.vhd
+# Compile Entity "SixBitProcessorWithMultiplier"
+# Compile Architecture "SixBitProcessorWithMultiplierArch" of Entity "SixBitProcessorWithMultiplier"
+# Warning: COMP96_0349: SixBitProcessorWithMultiplier.vhd : (73, 2): Aggregate with multiple choices has a non-static or null choice.
+# Compile success 0 Errors 1 Warnings  Analysis time :  47.0 [ms]
+comp -include "$dsn\src\TestBench\sixbitprocessorwithmultiplier_TB.vhd" 
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/TestBench/sixbitprocessorwithmultiplier_TB.vhd
+# Compile Entity "sixbitprocessorwithmultiplier_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "sixbitprocessorwithmultiplier_tb"
+# Compile Configuration "TESTBENCH_FOR_sixbitprocessorwithmultiplier"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+asim +access +r TESTBENCH_FOR_sixbitprocessorwithmultiplier 
+# VSIM: Simulation has finished.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6614 kB (elbread=427 elab2=6043 kernel=143 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\zephyrus\Desktop\CoDes_Project_Changiziyan_Alireza_Salehi_Sadra\CoDesProject\SixBitProcessor\src\wave.asdb
+#  2:13 PM, Sunday, July 7, 2024
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/wave.asdb'.
+wave 
+wave -noreg clk
+wave -noreg reset
+# # The following lines can be used for timing simulation
+# # acom <backannotated_vhdl_file_name>
+# # comp -include "$dsn\src\TestBench\sixbitprocessorwithmultiplier_TB_tim_cfg.vhd" 
+# # asim +access +r TIMING_FOR_sixbitprocessorwithmultiplier 
+# VSIM: 2 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/wave.asdb'.
+# add wave -noreg {/sixbitprocessorwithmultiplier_tb/UUT/state_reg}
+# VSIM: 1 object(s) traced.
+# add wave -noreg {/sixbitprocessorwithmultiplier_tb/UUT/ROUT}
+# VSIM: 1 object(s) traced.
+run 100 ns
+# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessorwithmultiplier_tb/UUT,  Process: line__163.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessorwithmultiplier_tb/UUT,  Process: line__167.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessorwithmultiplier_tb/UUT,  Process: line__170.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessorwithmultiplier_tb/UUT,  Process: line__170.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessorwithmultiplier_tb/UUT/Registers__0,  Process: line__93.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessorwithmultiplier_tb/UUT/Registers__1,  Process: line__93.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessorwithmultiplier_tb/UUT/Registers__2,  Process: line__93.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessorwithmultiplier_tb/UUT/Registers__3,  Process: line__93.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 2,  Instance: /sixbitprocessorwithmultiplier_tb/UUT,  Process: line__167.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 2,  Instance: /sixbitprocessorwithmultiplier_tb/UUT,  Process: line__170.
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
 acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/SixBitProcessor.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
 # File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessor.vhd
 # Compile Entity "SixBitProcessor"
 # Compile Architecture "SixBitProcessorArch" of Entity "SixBitProcessor"
-# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
+acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/SixBitProcessorWithMultiplier.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessorWithMultiplier.vhd
+# Compile Entity "SixBitProcessorWithMultiplier"
+# Compile Architecture "SixBitProcessorWithMultiplierArch" of Entity "SixBitProcessorWithMultiplier"
+# Warning: COMP96_0349: SixBitProcessorWithMultiplier.vhd : (73, 2): Aggregate with multiple choices has a non-static or null choice.
+# Compile success 0 Errors 1 Warnings  Analysis time :  62.0 [ms]
 acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/TestBench/sixbitprocessor_TB.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
 # File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/TestBench/sixbitprocessor_TB.vhd
@@ -482,74 +623,9 @@ asim +access +r TESTBENCH_FOR_sixbitprocessor
 # SLP: Finished : 0.0 [s]
 # ELAB2: Elaboration final pass complete - time: 0.0 [s].
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 6604 kB (elbread=427 elab2=6035 kernel=141 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\zephyrus\Desktop\CoDes_Project_Changiziyan_Alireza_Salehi_Sadra\CoDesProject\SixBitProcessor\src\wave.asdb
-#  6:52 PM, Friday, July 5, 2024
-#  Simulation has been initialized
-wave 
-wave -noreg clk
-wave -noreg reset
-# # The following lines can be used for timing simulation
-# # acom <backannotated_vhdl_file_name>
-# # comp -include "$dsn\src\TestBench\sixbitprocessor_TB_tim_cfg.vhd" 
-# # asim +access +r TIMING_FOR_sixbitprocessor 
-# VSIM: 2 object(s) traced.
-# Waveform file 'untitled.awc' connected to 'C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/wave.asdb'.
-run 100 ns
-# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT,  Process: line__174.
-# RUNTIME: Fatal Error: RUNTIME_0047 SixBitProcessor.vhd (175): Index -2147483648 out of range (63 downto 0).
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT,  Process: line__175.
-# KERNEL: Stopped at time 0 ps + 0.
-# VSIM: Error: Fatal error occurred during simulation.
-acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/SixBitProcessor.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessor.vhd
-# Compile Entity "SixBitProcessor"
-# Compile Architecture "SixBitProcessorArch" of Entity "SixBitProcessor"
-# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
-acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/TestBench/sixbitprocessor_TB.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/TestBench/sixbitprocessor_TB.vhd
-# Compile Entity "sixbitprocessor_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "sixbitprocessor_tb"
-# Compile Configuration "TESTBENCH_FOR_sixbitprocessor"
-# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
-SetActiveLib -work
-comp -include "$dsn\src\SixBitProcessor.vhd" 
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessor.vhd
-# Compile Entity "SixBitProcessor"
-# Compile Architecture "SixBitProcessorArch" of Entity "SixBitProcessor"
-# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
-comp -include "$dsn\src\TestBench\sixbitprocessor_TB.vhd" 
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/TestBench/sixbitprocessor_TB.vhd
-# Compile Entity "sixbitprocessor_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "sixbitprocessor_tb"
-# Compile Configuration "TESTBENCH_FOR_sixbitprocessor"
-# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
-asim +access +r TESTBENCH_FOR_sixbitprocessor 
-# VSIM: Simulation has finished.
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
 # Allocation: Simulator allocated 6605 kB (elbread=427 elab2=6035 kernel=141 sdf=0)
 # KERNEL: ASDB file was created in location C:\Users\zephyrus\Desktop\CoDes_Project_Changiziyan_Alireza_Salehi_Sadra\CoDesProject\SixBitProcessor\src\wave.asdb
-#  6:59 PM, Friday, July 5, 2024
+#  2:21 PM, Sunday, July 7, 2024
 #  Simulation has been initialized
 # Waveform file 'untitled.awc' connected to 'C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/wave.asdb'.
 wave 
@@ -561,180 +637,55 @@ wave -noreg reset
 # # asim +access +r TIMING_FOR_sixbitprocessor 
 # VSIM: 2 object(s) traced.
 # Waveform file 'untitled.awc' connected to 'C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/wave.asdb'.
-# add wave -noreg {/sixbitprocessor_tb/UUT/ROUT}
+# add wave -noreg {/sixbitprocessor_tb/UUT/state_reg}
 # VSIM: 1 object(s) traced.
 run 100 ns
 # KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT,  Process: line__167.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 # KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT,  Process: line__174.
 # KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT,  Process: line__181.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT/Registers__0,  Process: line__104.
 # KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT/Registers__0,  Process: line__105.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT/Registers__1,  Process: line__104.
 # KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT/Registers__1,  Process: line__105.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT/Registers__2,  Process: line__104.
 # KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT/Registers__2,  Process: line__105.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT/Registers__3,  Process: line__104.
 # KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT/Registers__3,  Process: line__105.
-# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 2,  Instance: /sixbitprocessor_tb/UUT,  Process: line__181.
+# KERNEL: Time: 0 ps,  Iteration: 2,  Instance: /sixbitprocessor_tb/UUT,  Process: line__174.
 # KERNEL: stopped at time: 100 ns
 run 100 ns
 # KERNEL: stopped at time: 200 ns
 run 100 ns
 # KERNEL: stopped at time: 300 ns
-run 100 ns
-# KERNEL: stopped at time: 400 ns
-run 100 ns
-# KERNEL: stopped at time: 500 ns
-run 100 ns
-# KERNEL: stopped at time: 600 ns
-run 100 ns
-# KERNEL: stopped at time: 700 ns
-run 100 ns
-# KERNEL: stopped at time: 800 ns
-run 100 ns
-# KERNEL: stopped at time: 900 ns
-run 100 ns
-# KERNEL: stopped at time: 1 us
-run 100 ns
-# KERNEL: stopped at time: 1100 ns
-run 100 ns
-# KERNEL: stopped at time: 1200 ns
-run 100 ns
-# KERNEL: stopped at time: 1300 ns
-run 100 ns
-# KERNEL: stopped at time: 1400 ns
-run 100 ns
-# KERNEL: stopped at time: 1500 ns
-run 100 ns
-# KERNEL: stopped at time: 1600 ns
-run 100 ns
-# KERNEL: stopped at time: 1700 ns
-run 100 ns
-# KERNEL: stopped at time: 1800 ns
-run 100 ns
-# KERNEL: stopped at time: 1900 ns
-acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/SixBitProcessor.vhd
+acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/SixBitProcessorWithMultiplier.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessor.vhd
-# Compile Entity "SixBitProcessor"
-# Compile Architecture "SixBitProcessorArch" of Entity "SixBitProcessor"
-# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
-acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/SixBitProcessor.vhd
+# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessorWithMultiplier.vhd
+# Compile Entity "SixBitProcessorWithMultiplier"
+# Compile Architecture "SixBitProcessorWithMultiplierArch" of Entity "SixBitProcessorWithMultiplier"
+# Warning: COMP96_0349: SixBitProcessorWithMultiplier.vhd : (73, 2): Aggregate with multiple choices has a non-static or null choice.
+# Compile success 0 Errors 1 Warnings  Analysis time :  63.0 [ms]
+acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/TestBench/sixbitprocessorwithmultiplier_TB.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessor.vhd
-# Compile Entity "SixBitProcessor"
-# Compile Architecture "SixBitProcessorArch" of Entity "SixBitProcessor"
-# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
-acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/TestBench/sixbitprocessor_TB.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/TestBench/sixbitprocessor_TB.vhd
-# Compile Entity "sixbitprocessor_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "sixbitprocessor_tb"
-# Compile Configuration "TESTBENCH_FOR_sixbitprocessor"
-# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
-acom -O3 -e 100 -work SixBitProcessor -2002  $dsn/src/TestBench/sixbitprocessor_TB.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/TestBench/sixbitprocessor_TB.vhd
-# Compile Entity "sixbitprocessor_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "sixbitprocessor_tb"
-# Compile Configuration "TESTBENCH_FOR_sixbitprocessor"
-# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/TestBench/sixbitprocessorwithmultiplier_TB.vhd
+# Compile Entity "sixbitprocessorwithmultiplier_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "sixbitprocessorwithmultiplier_tb"
+# Compile Configuration "TESTBENCH_FOR_sixbitprocessorwithmultiplier"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
 SetActiveLib -work
-comp -include "$dsn\src\SixBitProcessor.vhd" 
+comp -include "$dsn\src\SixBitProcessorWithMultiplier.vhd" 
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessor.vhd
-# Compile Entity "SixBitProcessor"
-# Compile Architecture "SixBitProcessorArch" of Entity "SixBitProcessor"
-# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
-comp -include "$dsn\src\TestBench\sixbitprocessor_TB.vhd" 
+# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessorWithMultiplier.vhd
+# Compile Entity "SixBitProcessorWithMultiplier"
+# Compile Architecture "SixBitProcessorWithMultiplierArch" of Entity "SixBitProcessorWithMultiplier"
+# Warning: COMP96_0349: SixBitProcessorWithMultiplier.vhd : (73, 2): Aggregate with multiple choices has a non-static or null choice.
+# Compile success 0 Errors 1 Warnings  Analysis time :  62.0 [ms]
+comp -include "$dsn\src\TestBench\sixbitprocessorwithmultiplier_TB.vhd" 
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/TestBench/sixbitprocessor_TB.vhd
-# Compile Entity "sixbitprocessor_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "sixbitprocessor_tb"
-# Compile Configuration "TESTBENCH_FOR_sixbitprocessor"
-# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
-asim +access +r TESTBENCH_FOR_sixbitprocessor 
-# VSIM: Simulation has finished.
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 6605 kB (elbread=427 elab2=6035 kernel=141 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\zephyrus\Desktop\CoDes_Project_Changiziyan_Alireza_Salehi_Sadra\CoDesProject\SixBitProcessor\src\wave.asdb
-#  7:08 PM, Friday, July 5, 2024
-#  Simulation has been initialized
-wave 
-wave -noreg clk
-wave -noreg reset
-# # The following lines can be used for timing simulation
-# # acom <backannotated_vhdl_file_name>
-# # comp -include "$dsn\src\TestBench\sixbitprocessor_TB_tim_cfg.vhd" 
-# # asim +access +r TIMING_FOR_sixbitprocessor 
-# VSIM: 2 object(s) traced.
-# Waveform file 'untitled.awc' connected to 'C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/wave.asdb'.
-# add wave -noreg {/sixbitprocessor_tb/UUT/ROUT}
-# VSIM: 1 object(s) traced.
-run 100 ns
-# KERNEL: WARNING: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT,  Process: line__174.
-# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT,  Process: line__181.
-# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT/Registers__0,  Process: line__105.
-# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT/Registers__1,  Process: line__105.
-# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT/Registers__2,  Process: line__105.
-# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /sixbitprocessor_tb/UUT/Registers__3,  Process: line__105.
-# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 2,  Instance: /sixbitprocessor_tb/UUT,  Process: line__181.
-# KERNEL: stopped at time: 100 ns
-run 100 ns
-# KERNEL: stopped at time: 200 ns
-run 100 ns
-# KERNEL: stopped at time: 300 ns
-run 100 ns
-# KERNEL: stopped at time: 400 ns
-run 100 ns
-# KERNEL: stopped at time: 500 ns
-run 100 ns
-# KERNEL: stopped at time: 600 ns
-run 100 ns
-# KERNEL: stopped at time: 700 ns
-run 100 ns
-# KERNEL: stopped at time: 800 ns
-run 100 ns
-# KERNEL: stopped at time: 900 ns
-run 100 ns
-# KERNEL: stopped at time: 1 us
-run 100 ns
-# KERNEL: stopped at time: 1100 ns
-run 100 ns
-# KERNEL: stopped at time: 1200 ns
-run 100 ns
-# KERNEL: stopped at time: 1300 ns
-run 100 ns
-# KERNEL: stopped at time: 1400 ns
-run 100 ns
-# KERNEL: stopped at time: 1500 ns
-run 100 ns
-# KERNEL: stopped at time: 1600 ns
-run 100 ns
-# KERNEL: stopped at time: 1700 ns
-run 100 ns
-# KERNEL: stopped at time: 1800 ns
+# File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/TestBench/sixbitprocessorwithmultiplier_TB.vhd
+# Compile Entity "sixbitprocessorwithmultiplier_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "sixbitprocessorwithmultiplier_tb"
+# Compile Configuration "TESTBENCH_FOR_sixbitprocessorwithmultiplier"
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+a
