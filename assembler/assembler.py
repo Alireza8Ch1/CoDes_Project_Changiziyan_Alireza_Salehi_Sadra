@@ -1,11 +1,13 @@
-#Dictionaries used for opcodes and registers
+from termcolor import colored
+
+#Dictionaries used for opcodes
 opcodesDictionary = {
     "load": "00",
     "add": "01",
     "sub": "10",
     "jnz": "11"
 }
-
+#Dictionary used for registers
 registersDictionary = {
     "r0": "00",
     "r1": "01",
@@ -13,9 +15,16 @@ registersDictionary = {
     "r3": "11"
 }
 
+# A dictionary for choosing one color for each opcode
+opcodeColorDictionary = {
+    "load": "cyan",
+    "add": "green",
+    "sub": "yellow",
+    "jnz": "red"
+}
+
 def convert_assembly_to_binary(input_data):
     #asseble parameters
-    current_label = 1
     label_address = {}
     output = ""
     
@@ -82,35 +91,40 @@ def convert_assembly_to_binary(input_data):
         first_register = extract_first_register(instruction)
         
         #first add opcode and first_register binary codes to output
-        output += opcodesDictionary[opcode]
-        output += first_register
+        output += colored(opcodesDictionary[opcode], opcodeColorDictionary[opcode])
+        output += colored(first_register, opcodeColorDictionary[opcode])
+        
 
         #second add rest of the binary code depend on third item in instruction list
+        restOfOutput = ""
         if opcode=="load":
-            output += "00\n"
-            output += convert_to_binary(int(instruction[2]))
+            restOfOutput += "00\n"
+            load_value = convert_to_binary(int(instruction[2]))
+            restOfOutput += colored(load_value, "blue")
         elif opcode=="jnz":
-            output += "00\n"
-            output += convert_to_binary(label_address[instruction[2]])
+            restOfOutput += "00\n"
+            jump_address = convert_to_binary(label_address[instruction[2]])
+            restOfOutput += colored(jump_address, "blue")
         else:
-            output += registersDictionary[instruction[2]]
-
+            restOfOutput += registersDictionary[instruction[2]]
+        
+        output+=colored(restOfOutput, opcodeColorDictionary[opcode])
         output += "\n"
 
+    #end of the binary code
     output += "111111"
     return output
 
 
 def giveExampleInput():
-    input_data = """load r0, 6
-                    load r1, 8
+    input_data = """load r0, 4
+                    load r1, 3
+                    l0:add r0, r1
+                    jnz r1, l0
                     load r2, 1
                     load r3, 0
-                    l0:add r3, r0
-                    sub r1, r2
-                    jnz r1, l0"""
+                    sub r2, r3"""
 
-    # assembler = Assembler(input_data)
     print("output:\n" + convert_assembly_to_binary(input_data))
 
 
