@@ -1,6 +1,6 @@
 WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
-MESSAGE "File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/TestBench/sixbitprocessor_TB.vhd" 
-MESSAGE "Compile Entity "sixbitprocessor_tb"" 
-MESSAGE "Compile Architecture "TB_ARCHITECTURE" of Entity "sixbitprocessor_tb"" 
-MESSAGE "Compile Configuration "TESTBENCH_FOR_sixbitprocessor"" 
-SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]" 
+MESSAGE "File: C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessorWithMultiplier.vhd" 
+MESSAGE "Compile Entity "SixBitProcessorWithMultiplier"" 
+MESSAGE "Compile Architecture "SixBitProcessorWithMultiplierArch" of Entity "SixBitProcessorWithMultiplier"" 
+WARNING COMP96_0349: "Aggregate with multiple choices has a non-static or null choice." "C:/Users/zephyrus/Desktop/CoDes_Project_Changiziyan_Alireza_Salehi_Sadra/CoDesProject/SixBitProcessor/src/SixBitProcessorWithMultiplier.vhd" 76 2
+SUCCESS "Compile success 0 Errors 1 Warnings  Analysis time :  63.0 [ms]" 

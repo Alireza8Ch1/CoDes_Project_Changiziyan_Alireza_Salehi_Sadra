@@ -1,4 +1,4 @@
-Active-HDL 13.0.375.8320 2024-07-08 23:43:06
+Active-HDL 13.0.375.8320 2024-07-09 00:03:41
 
 Elaboration top modules:
 VHDL Configuration            testbench_for_sixbitprocessor
@@ -35,7 +35,3 @@ ieee                                     | Standard IEEE packages library
 sixbitprocessor                          | None
 std                                      | Standard VHDL library
 --------------------------------------------------------------------------------------------------------------------
-
-
-Simulation Options: asim +access +r TESTBENCH_FOR_sixbitprocessor
-

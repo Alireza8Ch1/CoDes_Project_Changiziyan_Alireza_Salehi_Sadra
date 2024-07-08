@@ -75,13 +75,13 @@ signal Memory : Memory_TYPE :=
        --others => "111111"  	 
 
 	   --second section inputs: 
-	   --multiplier implemented by software	
-	   -- Load R0,	  
-		-- 6			
-		-- Load R1, 
-		-- 8		
-		-- Mult, R0, R1		 
-		-- Halt 
+	   --load r0, 8
+	    --load r1, 6
+	    --load r2, 0
+	    --load r3, 1
+	    --addLabel:add r2, r0
+	    --sub r1, r3
+        --jnz r1, addLabel
         0  => "000000", 
         1  => "001000",	
         2  => "000100",	
