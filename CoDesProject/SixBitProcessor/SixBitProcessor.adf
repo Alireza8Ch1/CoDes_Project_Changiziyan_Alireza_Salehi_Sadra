@@ -33,6 +33,6 @@ TestBench/sixbitprocessorwithmultiplier_TB_runtest.do=-1
 [Groups]
 TestBench=1
 [HierarchyViewer]
-HierarchyInformation=sixbitprocessorwithmultiplier_tb|testbench_for_sixbitprocessorwithmultiplier|1
+HierarchyInformation=sixbitprocessor_tb|testbench_for_sixbitprocessor|1 sixbitprocessorwithmultiplier_tb|testbench_for_sixbitprocessorwithmultiplier|1
 ShowHide=ShowTopLevel
 Selected=

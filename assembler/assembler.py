@@ -117,13 +117,13 @@ def convert_assembly_to_binary(input_data):
 
 
 def giveExampleInput():
-    input_data = """load r0, 4
-                    load r1, 3
-                    l0:add r0, r1
-                    jnz r1, l0
-                    load r2, 1
-                    load r3, 0
-                    sub r2, r3"""
+    input_data = """load r0, 8
+                    load r1, 6
+                    load r2, 0
+                    load r3, 1
+                    addLabel:add r2, r0
+                    sub r1, r3
+                    jnz r1, addLabel"""
 
     print("output:\n" + convert_assembly_to_binary(input_data))
 

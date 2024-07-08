@@ -1,73 +1,73 @@
-timestamp=1720440314302
+timestamp=1720465986232
 
 [~A]
-ModifyID=195
+ModifyID=225
 Version=74
 
 [~MFT]
-0=4|0SixBitProcessor.mgf|314407|298584
-1=4|1SixBitProcessor.mgf|676472|663927
-3=2|3SixBitProcessor.mgf|349061|340995
+0=4|0SixBitProcessor.mgf|352982|337131
+1=4|1SixBitProcessor.mgf|770441|757805
+3=2|3SixBitProcessor.mgf|402249|394068
 
 [sixbitprocessor]
-A/sixbitprocessorarch=A/SixBitProcessorArch 21|../src/SixBitProcessor.vhd|12|1*652172
-BinW64/sixbitprocessorarch=3*335796
+A/sixbitprocessorarch=A/SixBitProcessorArch 21|../src/SixBitProcessor.vhd|12|1*764668
+BinW64/sixbitprocessorarch=3*399267
 I=0*158794
-I/sixbitprocessorarch=I/SixBitProcessorArch 0*303189
+I/sixbitprocessorarch=I/SixBitProcessorArch 0*352254
 M=11|2|vef|1720187778591|../src/SixBitProcessor.vhd|0*158413*0x3b49a97eccd74aaf09c813a18f2136f0af918828|0*158699*0x23b75c12e3e89f2ef000564498faa8c2
-M/sixbitprocessorarch=M/SixBitProcessorArch 21|2|vef|1720439880085|../src/SixBitProcessor.vhd|0*298684*0xa5c0d01613e8ef965f5c2106e3e42966152c42ab|0*302163*0x20116f55b147878295aeff36dce7fc50
+M/sixbitprocessorarch=M/SixBitProcessorArch 21|2|vef|1720465985977|../src/SixBitProcessor.vhd|0*347749*0xf5e69a837a2cc164b52bbcae5a4ed0a1ce9511dc|0*351228*0x20116f55b147878295aeff36dce7fc50
 R=../src/SixBitProcessor.vhd|6
 Version=13.0.375.8320 (Windows64)|00000003789cd3f5370600015b00b0|5dc6135c66b658e5b1ab6a25b194ea3991d86b5529289a71710d991e993ef7a6773c9ea79018a30b66e494d10d3b6113
-Version/sixbitprocessorarch=13.0.375.8320 (Windows64)|00000003789cd3f5370600015b00b0|5dc6135c66b658e5b1ab6a25b194ea3998ef072a895532fbbbdeb87c2276df17b2ee03c667234aa399614dd2d465ee5f
+Version/sixbitprocessorarch=13.0.375.8320 (Windows64)|00000003789cd3f5370600015b00b0|5dc6135c66b658e5b1ab6a25b194ea3998ef072a895532fbbbdeb87c2276df1733f6170ca154ac0a31d074f62409d3ed
 
 [sixbitprocessor_tb]
-A/tb_architecture=A/TB_ARCHITECTURE 21|../src/TestBench/sixbitprocessor_TB.vhd|11|1*656905
-BinW64/tb_architecture=3*338761
+A/tb_architecture=A/TB_ARCHITECTURE 21|../src/TestBench/sixbitprocessor_TB.vhd|11|1*769408
+BinW64/tb_architecture=3*402249
 I=0*163633
-I/tb_architecture=I/TB_ARCHITECTURE 0*303533
+I/tb_architecture=I/TB_ARCHITECTURE 0*352598
 M=11|2|vef|1720187799159|../src/TestBench/sixbitprocessor_TB.vhd|0*163248*0x351d4af3978e0e7344effcf70babe1b5a1db9c73|0*163522*0x23b75c12e3e89f2ef000564498faa8c2
-M/tb_architecture=M/TB_ARCHITECTURE 21|2|vef|1720439880321|../src/TestBench/sixbitprocessor_TB.vhd|0*212264*0x48c417b8c30d5d79801064e2ad4c571c1c1f4962|0*212738*0x20116f55b147878295aeff36dce7fc50
+M/tb_architecture=M/TB_ARCHITECTURE 21|2|vef|1720465986213|../src/TestBench/sixbitprocessor_TB.vhd|0*212264*0x48c417b8c30d5d79801064e2ad4c571c1c1f4962|0*212738*0x20116f55b147878295aeff36dce7fc50
 R=../src/TestBench/sixbitprocessor_TB.vhd|8
 Version=13.0.375.8320 (Windows64)|00000003789cd3f5370600015b00b0|5dc6135c66b658e5b1ab6a25b194ea39733669e48b13ac7be03ad93551ff2a12e3d0c004917b369e5ca9d392e724d485
-Version/tb_architecture=13.0.375.8320 (Windows64)|00000003789cd3f5370600015b00b0|da2d76821309f33ed1264ca4678a936a8f84fef0fc5d0f10f1a8cfc2ad534bea146f134538a01b6e4400a7ef783dd4e3
+Version/tb_architecture=13.0.375.8320 (Windows64)|00000003789cd3f5370600015b00b0|da2d76821309f33ed1264ca4678a936a8f84fef0fc5d0f10f1a8cfc2ad534beae80a3c27acd6c1f2ce8250cbb3d7d07b
 
 [sixbitprocessorwithmultiplier]
-A/sixbitprocessorwithmultiplierarch=A/SixBitProcessorWithMultiplierArch 21|../src/SixBitProcessorWithMultiplier.vhd|13|1*670206
-BinW64/sixbitprocessorwithmultiplierarch=3*344400
+A/sixbitprocessorwithmultiplierarch=A/SixBitProcessorWithMultiplierArch 21|../src/SixBitProcessorWithMultiplier.vhd|13|1*714179
+BinW64/sixbitprocessorwithmultiplierarch=3*370143
 I=0*125264
-I/sixbitprocessorwithmultiplierarch=I/SixBitProcessorWithMultiplierArch 0*313623
+I/sixbitprocessorwithmultiplierarch=I/SixBitProcessorWithMultiplierArch 0*330646
 M=11|2|vef|1720183028005|../src/SixBitProcessorWithMultiplier.vhd|0*124761*0x08f59fba35ac46237b04c723a41a147e75193474|0*125141*0x23b75c12e3e89f2ef000564498faa8c2
-M/sixbitprocessorwithmultiplierarch=M/SixBitProcessorWithMultiplierArch 21|2|vef|1720440314048|../src/SixBitProcessorWithMultiplier.vhd|0*308550*0x6fe8b614a39200f0a2f795691d3eebdfe6cd450b|0*312471*0x20116f55b147878295aeff36dce7fc50
+M/sixbitprocessorwithmultiplierarch=M/SixBitProcessorWithMultiplierArch 21|2|vef|1720457289236|../src/SixBitProcessorWithMultiplier.vhd|0*308550*0x6fe8b614a39200f0a2f795691d3eebdfe6cd450b|0*312471*0x20116f55b147878295aeff36dce7fc50
 R=../src/SixBitProcessorWithMultiplier.vhd|6
 Version=13.0.375.8320 (Windows64)|00000003789cd3f5370600015b00b0|5dc6135c66b658e5b1ab6a25b194ea39f16b943180bd1460c56025696ca7a142e75379eb7ff4e1afc438c620bc99e4e6e18ba6bd664528557f84dea149809aad
-Version/sixbitprocessorwithmultiplierarch=13.0.375.8320 (Windows64)|00000003789cd3f5370600015b00b0|5dc6135c66b658e5b1ab6a25b194ea39f16b943180bd1460c56025696ca7a1425311a8d0a269f499b87d45ca5f4fa3951baccdb6db146254ccda7044ebe0358b
+Version/sixbitprocessorwithmultiplierarch=13.0.375.8320 (Windows64)|00000003789cd3f5370600015b00b0|5dc6135c66b658e5b1ab6a25b194ea39f16b943180bd1460c56025696ca7a1425311a8d0a269f499b87d45ca5f4fa395f223563063f877ff159d98fbb50c7e70
 
 [sixbitprocessorwithmultiplier_tb]
-A/tb_architecture=A/TB_ARCHITECTURE 21|../src/TestBench/sixbitprocessorwithmultiplier_TB.vhd|14|1*675104
-BinW64/tb_architecture=3*349061
+A/tb_architecture=A/TB_ARCHITECTURE 21|../src/TestBench/sixbitprocessorwithmultiplier_TB.vhd|14|1*719077
+BinW64/tb_architecture=3*374804
 I=0*133440
-I/tb_architecture=I/TB_ARCHITECTURE 0*313995
+I/tb_architecture=I/TB_ARCHITECTURE 0*331018
 M=11|2|vef|1720183086952|../src/TestBench/sixbitprocessorwithmultiplier_TB.vhd|0*132931*0x31619fdefa05eb04fd6648a06c6cad5c4c6b4a5f|0*133301*0x23b75c12e3e89f2ef000564498faa8c2
-M/tb_architecture=M/TB_ARCHITECTURE 21|2|vef|1720440314283|../src/TestBench/sixbitprocessorwithmultiplier_TB.vhd|0*155151*0xc5965df203dea99fe6b588b7d066b415d2ed3ad6|0*155782*0x20116f55b147878295aeff36dce7fc50
+M/tb_architecture=M/TB_ARCHITECTURE 21|2|vef|1720457289465|../src/TestBench/sixbitprocessorwithmultiplier_TB.vhd|0*155151*0xc5965df203dea99fe6b588b7d066b415d2ed3ad6|0*155782*0x20116f55b147878295aeff36dce7fc50
 R=../src/TestBench/sixbitprocessorwithmultiplier_TB.vhd|8
 Version=13.0.375.8320 (Windows64)|00000003789cd3f5370600015b00b0|5dc6135c66b658e5b1ab6a25b194ea39f16b943180bd1460c56025696ca7a1429c38bbe5def2a7c09cd69ef296cfb745f3267e5d74e62cb901c46d109f2338ca
-Version/tb_architecture=13.0.375.8320 (Windows64)|00000003789cd3f5370600015b00b0|da2d76821309f33ed1264ca4678a936a8f84fef0fc5d0f10f1a8cfc2ad534bea31e2da20d9feb091fb8d95aadb7b73c6
+Version/tb_architecture=13.0.375.8320 (Windows64)|00000003789cd3f5370600015b00b0|da2d76821309f33ed1264ca4678a936a8f84fef0fc5d0f10f1a8cfc2ad534bea405c478c23614da8093c288297dfed78
 
 [testbench_for_sixbitprocessor]
 Configures=sixbitprocessor_tb.TB_ARCHITECTURE
-E=1*657938
-I=0*303917
-M=2|2|vef|1720439880324|../src/TestBench/sixbitprocessor_TB.vhd|0*213252*0xcb3f2a4f5ece1fe80ef94afb1efd62d7a559cdec|0*213611*0x20116f55b147878295aeff36dce7fc50
+E=1*770441
+I=0*352982
+M=2|2|vef|1720465986216|../src/TestBench/sixbitprocessor_TB.vhd|0*213252*0xcb3f2a4f5ece1fe80ef94afb1efd62d7a559cdec|0*213611*0x20116f55b147878295aeff36dce7fc50
 R=../src/TestBench/sixbitprocessor_TB.vhd|47
-Version=13.0.375.8320 (Windows64)|00000003789cd3f5370600015b00b0|5efd636a07bb57613e35fadc81a5c3e5718d5b819e2e14a93e1aa93dddcc0f61a99e6198a3acd6fbc3a42618117dbc4bf28a1bd517cfd3a323f99881b8887737
+Version=13.0.375.8320 (Windows64)|00000003789cd3f5370600015b00b0|5efd636a07bb57613e35fadc81a5c3e5718d5b819e2e14a93e1aa93dddcc0f61a99e6198a3acd6fbc3a42618117dbc4b15da858b0fad3d93e4eb9b51d608e05e
 
 [testbench_for_sixbitprocessorwithmultiplier]
 Configures=sixbitprocessorwithmultiplier_tb.TB_ARCHITECTURE
-E=1*676472
-I=0*314407
-M=2|2|vef|1720440314286|../src/TestBench/sixbitprocessorwithmultiplier_TB.vhd|0*156352*0x608a592e84a158e19c36102a69e24164d9422c76|0*156837*0x20116f55b147878295aeff36dce7fc50
+E=1*720445
+I=0*331430
+M=2|2|vef|1720457289476|../src/TestBench/sixbitprocessorwithmultiplier_TB.vhd|0*156352*0x608a592e84a158e19c36102a69e24164d9422c76|0*156837*0x20116f55b147878295aeff36dce7fc50
 R=../src/TestBench/sixbitprocessorwithmultiplier_TB.vhd|56
-Version=13.0.375.8320 (Windows64)|00000003789cd3f5370600015b00b0|78026634ff729a6420e9f5bfa1e73dca2bdf6d954e485271ab0f5e292afdaa49a61421c498c4572d2753ac2f04173f54f1bad6bd3eb4d604605062a20fc22108b9c98bcdb0236f7c3bad9c2e5d93bfce
+Version=13.0.375.8320 (Windows64)|00000003789cd3f5370600015b00b0|78026634ff729a6420e9f5bfa1e73dca2bdf6d954e485271ab0f5e292afdaa49a61421c498c4572d2753ac2f04173f54f1bad6bd3eb4d604605062a20fc2210832979aec1ee1c9daeb3478b0cd13dd31
 
 [~U]
 sixbitprocessor=SixBitProcessor 11|0*158222|

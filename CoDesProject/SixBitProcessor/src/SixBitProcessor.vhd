@@ -27,7 +27,7 @@ type std_logic_array_2Bit	is array (natural range <>) of std_logic_vector(1 down
 -- control unit states
 signal state_reg, state_next : state_type;
 
--- "ROUT" and "RIN" in order are registers output and inputs that thier
+-- "ROUT" is registers output that it's
 -- type is an array of 6 bit values with array size 4 (number of registers is 4)
 signal ROUT : std_logic_vector_array(0 to 3);
 
@@ -73,7 +73,7 @@ signal Memory : Memory_TYPE :=
        --3     => "000100", 
        --4     => "010001", 
        --others => "111111"  	 
-	   
+
 	   --second section inputs: 
 	   --multiplier implemented by software	
 	   -- Load R0,	  
@@ -83,17 +83,28 @@ signal Memory : Memory_TYPE :=
 		-- Mult, R0, R1		 
 		-- Halt 
         0  => "000000", 
-        1  => "000110",	
+        1  => "001000",	
         2  => "000100",	
-        3  => "001000",	
+        3  => "000110",	
         4  => "001000",	
-        5  => "000001",	
+        5  => "000000",	
         6  => "001100",	
-        7  => "000000",	
-        8  => "011100", 
-        9  => "100110",
+        7  => "000001",	
+        8  => "011000", 
+        9  => "100111",
         10 => "110100",
-        11 => "001000",
+        11 => "001000",	  
+		
+		-- 4-3
+		--0 => "000000",
+		--1 => "000010",
+		--2 => "000100",
+		--3 => "000001",
+		--4 => "100001",
+		--5 => "110000",  
+		--6 => "000100", 
+		--7 => "000000",
+		--8 => "001010",
         others => "111111"   
 );
 

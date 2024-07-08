@@ -28,7 +28,7 @@ type std_logic_array_2Bit	is array (natural range <>) of std_logic_vector(1 down
 -- control unit states
 signal state_reg, state_next : state_type;
 
--- "ROUT" and "RIN" in order are registers output and inputs that thier
+-- "ROUT" is registers output that it's
 -- type is an array of 6 bit values with array size 4 (number of registers is 4)
 signal ROUT : std_logic_vector_array(0 to 3);
 
