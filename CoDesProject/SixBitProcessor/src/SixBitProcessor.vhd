@@ -29,14 +29,11 @@ signal state_reg, state_next : state_type;
 
 -- "ROUT" and "RIN" in order are registers output and inputs that thier
 -- type is an array of 6 bit values with array size 4 (number of registers is 4)
-signal ROUT,RIN : std_logic_vector_array(0 to 3);
+signal ROUT : std_logic_vector_array(0 to 3);
 
 -- "LD" and "ZR" are registers load and zero input that their type is
 -- an array of 1 bit values with array size 4
 signal LD,ZR : std_logic_array(0 to 3);		 
-
--- "IRNext" and "PCNext" are inputs for IR and PC registers
-signal IRNext,PCNext : std_logic_vector (5 downto 0);		 
 
 -- MUX inputs and outputs and selector for selecting BUS value
 signal MData, DataBUS, ALURes: std_logic_vector(5 downto 0);
@@ -63,14 +60,28 @@ type Memory_TYPE is array (63 downto 0) of std_logic_vector(5 downto 0);
 
 signal Memory : Memory_TYPE := 
 ( 		 
-   -- PART 1:
-       --0     => "000000", -- Load R0,
-       --1     => "000111", -- 7
-       --2     => "000100", -- Load R1,
-       --3     => "000100", -- 4
-       --4     => "010001", -- Add, R0, R1
-       --others => "111111" -- Halt	 
-        --PART 2:
+		-- first sectoin inputs:	 
+		-- Load R0,
+		-- 7	  
+		-- Load R1,	
+		-- 4		
+		-- Add, R0, R1	 
+		-- Halt	
+       --0     => "000000", 
+       --1     => "000111", 
+       --2     => "000100", 
+       --3     => "000100", 
+       --4     => "010001", 
+       --others => "111111"  	 
+	   
+	   --second section inputs: 
+	   --multiplier implemented by software	
+	   -- Load R0,	  
+		-- 6			
+		-- Load R1, 
+		-- 8		
+		-- Mult, R0, R1		 
+		-- Halt 
         0  => "000000", 
         1  => "000110",	
         2  => "000100",	
@@ -86,6 +97,7 @@ signal Memory : Memory_TYPE :=
         others => "111111"   
 );
 
+-- memory_read_address signal is used for holding address of a block from memory to read value of that block
 signal memory_read_address : integer range 0 to 63;
 
 begin	   

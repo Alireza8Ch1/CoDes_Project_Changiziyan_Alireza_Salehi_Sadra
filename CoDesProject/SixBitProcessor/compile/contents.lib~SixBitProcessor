@@ -1,4 +1,4 @@
-170
+195
 ~E 1 "../src/SixBitProcessor.vhd" 6 SixBitProcessor
 ~A 1 "../src/SixBitProcessor.vhd" 12 SixBitProcessorArch
 ~E 1 "../src/TestBench/sixbitprocessor_TB.vhd" 8 sixbitprocessor_tb

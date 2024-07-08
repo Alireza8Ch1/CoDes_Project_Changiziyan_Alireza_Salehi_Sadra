@@ -13,10 +13,10 @@ end SixBitProcessorWithMultiplier;
 architecture SixBitProcessorWithMultiplierArch of SixBitProcessorWithMultiplier is	 
 
 -- signals			  										  
--- "state_type" is type for control unit states
+-- "state_type" is type for control unit states with one more state for multiplier operator
 type state_type is (S0,S1, HLT, S2, S3, S4, S5, S6, S7, S8);
 
--- "std_logic_vector_array" is a type with 6 bits used for declare an array of 6bit values
+-- "std_logic_vector_array" is a type with 7 bits used for declare an array of 7bit values
 type std_logic_vector_array	is array (natural range <>) of std_logic_vector(instruction_bits - 1 downto 0);
 
 -- "std_logic_array" is a type with 1 bit used for declare an array of 1 bit values
@@ -30,23 +30,20 @@ signal state_reg, state_next : state_type;
 
 -- "ROUT" and "RIN" in order are registers output and inputs that thier
 -- type is an array of 6 bit values with array size 4 (number of registers is 4)
-signal ROUT,RIN : std_logic_vector_array(0 to 3);
+signal ROUT : std_logic_vector_array(0 to 3);
 
 -- "LD" and "ZR" are registers load and zero input that their type is
 -- an array of 1 bit values with array size 4
-signal LD,ZR : std_logic_array(0 to 3);		 
-
--- "IRNext" and "PCNext" are inputs for IR and PC registers
-signal IRNext,PCNext : std_logic_vector (instruction_bits-1 downto 0);		 
+signal LD,ZR : std_logic_array(0 to 3);		 	 
 
 -- MUX inputs and outputs and selector for selecting BUS value
-signal MData, DataBUS, ALURes: std_logic_vector(instruction_bits-1 downto 0);
+signal MData, DataBUS: std_logic_vector(instruction_bits-1 downto 0);
 signal BUSSel : std_logic; 													 
-
+signal ALURes : std_logic_vector(instruction_bits*2-1 downto 0);
 -- ALU MUXs' selectors that "ALUINSelector" is an array with size 2 with 2 bit values
 signal ALUINSelector: std_logic_array_2Bit(1 downto 0);
 
--- ALU IN1 and IN2 that "ALUIN" is an array with size 2 with 6 bit values
+-- ALU IN1 and IN2 that "ALUIN" is an array with size 2 with 7 bit values
 signal ALUIN : std_logic_vector_array(1 downto 0);
 
 -- ALU CMD for selecting operator
@@ -64,16 +61,22 @@ type Memory_TYPE is array (63 downto 0) of std_logic_vector(instruction_bits-1 d
 
 signal Memory : Memory_TYPE := 
 ( 		 
-  --PART 3:
-    0 => "0000000",	-- Load R0,
-	1 => "0000110",	-- 6
-	2 => "0000100",	-- Load R1, 
-	3 => "0001000",	-- 8
-	4 => "1000001",	-- Mult, R0, R1
-	others => "1111111" -- Halt  
+	--third Section inputs:
+	-- Load R0,	  
+	-- 6			
+	-- Load R1, 
+	-- 8		
+	-- Mult, R0, R1		 
+	-- Halt  
+    0 => "0000000",	
+	1 => "0000110",	
+	2 => "0000100",	
+	3 => "0001000",	
+	4 => "1000001",	
+	others => "1111111" 
 );
 
-signal multRes : std_logic_vector(instruction_bits*2-1 downto 0);
+-- memory_read_address signal is used for holding address of a block from memory to read value of that block
 signal memory_read_address : integer range 0 to 63;	   
 
 begin	   
@@ -145,7 +148,7 @@ begin
 			when '0' => 
 		 	   DataBUS <= MData; 
 			when '1' =>
-			   DataBUS <= ALURes;
+			   DataBUS <= ALURes(instruction_bits-1 downto 0);
 			when others =>
 			   DataBUS <= (others => '0');
 	    end case;	
@@ -157,11 +160,10 @@ begin
 	MData <= Memory(memory_read_address);	
 
 
-	multRes <= ALUIN(0) * ALUIN(1);
+
 		
 	-- ALU
-	ALURes <= ALUIN(0) + ALUIN(1) when CMD="00" else ALUIN(0) - ALUIN(1) when CMD="01" else multRes(instruction_bits-1 downto 0);
-	
+	ALURes <= "0000000" & (ALUIN(0) + ALUIN(1)) when CMD="00" else "0000000" & (ALUIN(0) - ALUIN(1)) when CMD="01" else ALUIN(0) * ALUIN(1);
 	
 	process(IR, ZR, state_reg)
 	begin		 
